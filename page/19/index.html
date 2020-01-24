@@ -104,7 +104,7 @@
         
           <section id="main">
   
-    <article id="post-boostcouse-bes" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="post-boostcouse-webapp-js" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -112,7 +112,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/07/22/boostcouse-bes/">redirect&amp;forward/Scope</a>
+      <a class="article-title" href="/2019/07/25/boostcouse-webapp-js/">웹앱 개발 - javascript, DOM</a>
     </h1>
   
 
@@ -120,8 +120,8 @@
     
     <div class="article-meta">
       
-	<a href="/2019/07/22/boostcouse-bes/" class="article-date">
-	  <time datetime="2019-07-22T11:40:18.000Z" itemprop="datePublished">7월 22, 2019</time>
+	<a href="/2019/07/25/boostcouse-webapp-js/" class="article-date">
+	  <time datetime="2019-07-25T06:39:18.000Z" itemprop="datePublished">7월 25, 2019</time>
 	</a>
 
       
@@ -131,114 +131,165 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="redirect-amp-forward"><a href="#redirect-amp-forward" class="headerlink" title="redirect &amp; forward"></a><code>redirect</code> &amp; <code>forward</code></h2><h3 id="redirect"><a href="#redirect" class="headerlink" title="redirect"></a><code>redirect</code></h3><p><img src="https://cphinf.pstatic.net/mooc/20180127_5/1517046342330PRbSX_PNG/2_4_1_redirect__.PNG" alt=""></p>
+        <h1 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h1><h2 id="배열"><a href="#배열" class="headerlink" title="배열"></a>배열</h2><ul>
+<li>배열 안에는 <strong>모든 타입이 다 들어갈 수 있음</strong><ul>
+<li>함수도 배열 안에 배열도, 배열 안에 객체도 들어갈 수 있음</li>
+</ul>
+</li>
+<li>자바스크립트 배열은 기본적인 <code>stack</code> 구조를 지닌다<ul>
+<li><code>arr.push(blah)</code>, <code>arr.pop()</code>을 사용할 수 있다</li>
+</ul>
+</li>
+</ul>
+<h3 id="유용한-메서드"><a href="#유용한-메서드" class="headerlink" title="유용한 메서드"></a>유용한 메서드</h3><ul>
+<li><code>arr.indexOf()</code><ul>
+<li>호출한 <code>String</code> 객체에서 주어진 값과 일치하는 첫 번째 인덱스 반환</li>
+<li>모두 일치하지 않으면 <code>-1</code> 반환</li>
+</ul>
+</li>
+<li><code>arr.join()</code><ul>
+<li>배열의 요소들을 문자열로 합칠 수 있다</li>
+</ul>
+</li>
+<li><code>arr.concat()</code><ul>
+<li>배열을 복사</li>
+</ul>
+</li>
+<li><code>arr.forEach(item =&gt; item)</code></li>
+<li><code>arr.map((item, index) =&gt; {})</code></li>
+<li><code>arr.filter(num =&gt; num &gt; 0)</code></li>
+</ul>
+<h2 id="객체"><a href="#객체" class="headerlink" title="객체"></a>객체</h2><p><code>key</code>, <code>value</code> 구조의 자료구조</p>
+<blockquote>
+<p><strong>객체 속성의 삭제</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">delete</span> myFriend.key;</span><br><span class="line">&gt; <span class="keyword">delete</span> myFriend[<span class="string">"key2"</span>];</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="객체의-탐색"><a href="#객체의-탐색" class="headerlink" title="객체의 탐색"></a>객체의 탐색</h3><ul>
+<li><code>for(객체 in item)</code></li>
+<li><code>Object.keys(객체).forEach(key =&gt; key)</code></li>
+</ul>
+<blockquote>
+<p><a href="https://gist.github.com/nigayo/a9a118977f82780441db664d6785efe3" target="_blank" rel="noopener">실습 예제</a></p>
 <ul>
-<li><code>서버</code>가 <code>클라이언트</code>의 요청에 대해 <strong>특정 URL로 이동을 요청</strong>하는 것</li>
-<li><code>HTTP 프로토콜</code>로 정해진 규칙</li>
-<li>서버는 클라이언트에게 HTTP 상태코드 <code>302</code>로 응답<ul>
-<li>헤더 내 <code>Location</code> 값에 이동할 <code>URL</code> 을 추가</li>
-<li>클라이언트는 리다이렉션 응답을 받게 되면 헤더(<code>Location</code>)에 포함된 <code>URL</code>로 재요청<ul>
-<li><strong>클라이언트는 요청을 두 번 보내는 셈</strong><ul>
-<li><strong>이 때의 <code>request</code> 객체와 <code>response</code> 객체는 첫 요청과는 다른 객체</strong></li>
+<li>type이 sk인, name으로 구성된 배열만 출력</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">&gt; [&#123;</span><br><span class="line">&gt; 	<span class="string">"id"</span>: <span class="number">1</span>,</span><br><span class="line">&gt; 	<span class="string">"name"</span>: <span class="string">"Yong"</span>,</span><br><span class="line">&gt; 	<span class="string">"phone"</span>: <span class="string">"010-0000-0000"</span>,</span><br><span class="line">&gt; 	<span class="string">"type"</span>: <span class="string">"sk"</span>,</span><br><span class="line">&gt; 	<span class="string">"childnode"</span>: [&#123;</span><br><span class="line">&gt; 		<span class="string">"id"</span>: <span class="number">11</span>,</span><br><span class="line">&gt; 		<span class="string">"name"</span>: <span class="string">"echo"</span>,</span><br><span class="line">&gt; 		<span class="string">"phone"</span>: <span class="string">"010-0000-1111"</span>,</span><br><span class="line">&gt; 		<span class="string">"type"</span>: <span class="string">"kt"</span>,</span><br><span class="line">&gt; 		<span class="string">"childnode"</span>: [&#123;</span><br><span class="line">&gt; 				<span class="string">"id"</span>: <span class="number">115</span>,</span><br><span class="line">&gt; 				<span class="string">"name"</span>: <span class="string">"hary"</span>,</span><br><span class="line">&gt; 				<span class="string">"phone"</span>: <span class="string">"211-1111-0000"</span>,</span><br><span class="line">&gt; 				<span class="string">"type"</span>: <span class="string">"sk"</span>,</span><br><span class="line">&gt; 				<span class="string">"childnode"</span>: [&#123;</span><br><span class="line">&gt; 					<span class="string">"id"</span>: <span class="number">1159</span>,</span><br><span class="line">&gt; 					<span class="string">"name"</span>: <span class="string">"pobi"</span>,</span><br><span class="line">&gt; 					<span class="string">"phone"</span>: <span class="string">"010-444-000"</span>,</span><br><span class="line">&gt; 					<span class="string">"type"</span>: <span class="string">"kt"</span>,</span><br><span class="line">&gt; 					<span class="string">"childnode"</span>: [&#123;</span><br><span class="line">&gt; 							<span class="string">"id"</span>: <span class="number">11592</span>,</span><br><span class="line">&gt; 							<span class="string">"name"</span>: <span class="string">"cherry"</span>,</span><br><span class="line">&gt; 							<span class="string">"phone"</span>: <span class="string">"111-222-0000"</span>,</span><br><span class="line">&gt; 							<span class="string">"type"</span>: <span class="string">"lg"</span>,</span><br><span class="line">&gt; 							<span class="string">"childnode"</span>: []</span><br><span class="line">&gt; 						&#125;,</span><br><span class="line">&gt; 						&#123;</span><br><span class="line">&gt; 							<span class="string">"id"</span>: <span class="number">11595</span>,</span><br><span class="line">&gt; 							<span class="string">"name"</span>: <span class="string">"solvin"</span>,</span><br><span class="line">&gt; 							<span class="string">"phone"</span>: <span class="string">"010-000-3333"</span>,</span><br><span class="line">&gt; 							<span class="string">"type"</span>: <span class="string">"sk"</span>,</span><br><span class="line">&gt; 							<span class="string">"childnode"</span>: []</span><br><span class="line">&gt; 						&#125;</span><br><span class="line">&gt; 					]</span><br><span class="line">&gt; 				&#125;]</span><br><span class="line">&gt; 			&#125;,</span><br><span class="line">&gt; 			&#123;</span><br><span class="line">&gt; 				<span class="string">"id"</span>: <span class="number">116</span>,</span><br><span class="line">&gt; 				<span class="string">"name"</span>: <span class="string">"kim"</span>,</span><br><span class="line">&gt; 				<span class="string">"phone"</span>: <span class="string">"444-111-0200"</span>,</span><br><span class="line">&gt; 				<span class="string">"type"</span>: <span class="string">"kt"</span>,</span><br><span class="line">&gt; 				<span class="string">"childnode"</span>: [&#123;</span><br><span class="line">&gt; 					<span class="string">"id"</span>: <span class="number">1168</span>,</span><br><span class="line">&gt; 					<span class="string">"name"</span>: <span class="string">"hani"</span>,</span><br><span class="line">&gt; 					<span class="string">"phone"</span>: <span class="string">"010-222-0000"</span>,</span><br><span class="line">&gt; 					<span class="string">"type"</span>: <span class="string">"sk"</span>,</span><br><span class="line">&gt; 					<span class="string">"childnode"</span>: [&#123;</span><br><span class="line">&gt; 						<span class="string">"id"</span>: <span class="number">11689</span>,</span><br><span class="line">&gt; 						<span class="string">"name"</span>: <span class="string">"ho"</span>,</span><br><span class="line">&gt; 						<span class="string">"phone"</span>: <span class="string">"010-000-0000"</span>,</span><br><span class="line">&gt; 						<span class="string">"type"</span>: <span class="string">"kt"</span>,</span><br><span class="line">&gt; 						<span class="string">"childnode"</span>: [&#123;</span><br><span class="line">&gt; 								<span class="string">"id"</span>: <span class="number">116890</span>,</span><br><span class="line">&gt; 								<span class="string">"name"</span>: <span class="string">"wonsuk"</span>,</span><br><span class="line">&gt; 								<span class="string">"phone"</span>: <span class="string">"010-000-0000"</span>,</span><br><span class="line">&gt; 								<span class="string">"type"</span>: <span class="string">"kt"</span>,</span><br><span class="line">&gt; 								<span class="string">"childnode"</span>: []</span><br><span class="line">&gt; 							&#125;,</span><br><span class="line">&gt; 							&#123;</span><br><span class="line">&gt; 								<span class="string">"id"</span>: <span class="number">1168901</span>,</span><br><span class="line">&gt; 								<span class="string">"name"</span>: <span class="string">"chulsu"</span>,</span><br><span class="line">&gt; 								<span class="string">"phone"</span>: <span class="string">"010-0000-0000"</span>,</span><br><span class="line">&gt; 								<span class="string">"type"</span>: <span class="string">"sk"</span>,</span><br><span class="line">&gt; 								<span class="string">"childnode"</span>: []</span><br><span class="line">&gt; 							&#125;</span><br><span class="line">&gt; 						]</span><br><span class="line">&gt; 					&#125;]</span><br><span class="line">&gt; 				&#125;]</span><br><span class="line">&gt; 			&#125;,</span><br><span class="line">&gt; 			&#123;</span><br><span class="line">&gt; 				<span class="string">"id"</span>: <span class="number">117</span>,</span><br><span class="line">&gt; 				<span class="string">"name"</span>: <span class="string">"hong"</span>,</span><br><span class="line">&gt; 				<span class="string">"phone"</span>: <span class="string">"010-0000-0000"</span>,</span><br><span class="line">&gt; 				<span class="string">"type"</span>: <span class="string">"lg"</span>,</span><br><span class="line">&gt; 				<span class="string">"childnode"</span>: []</span><br><span class="line">&gt; 			&#125;</span><br><span class="line">&gt; 		]</span><br><span class="line">&gt; 	&#125;]</span><br><span class="line">&gt; &#125;]</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong>답안</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">let</span> answer  = []</span><br><span class="line">&gt; <span class="function"><span class="keyword">function</span> <span class="title">names_in_sk</span>(<span class="params">datas</span>) </span>&#123;</span><br><span class="line">&gt;     <span class="comment">// function 키워드 삭제 시 안됨</span></span><br><span class="line">&gt;   datas.forEach(<span class="function"><span class="params">d</span> =&gt;</span> &#123;</span><br><span class="line">&gt;       <span class="keyword">if</span> (d.type == <span class="string">"sk"</span>) answer.push(d.name)</span><br><span class="line">&gt;       <span class="keyword">if</span>(d.childnode)  names_in_sk(d.childnode)</span><br><span class="line">&gt;   &#125;)</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><blockquote>
+<p><code>DOM</code> 노드도 1부터 시작된다</p>
+</blockquote>
+<h2 id="DOM-엘리먼트-오브젝트"><a href="#DOM-엘리먼트-오브젝트" class="headerlink" title="DOM 엘리먼트 오브젝트"></a>DOM 엘리먼트 오브젝트</h2><ul>
+<li><p><code>tagName</code> : 엘리먼트의 태그명 반환</p>
+</li>
+<li><p><code>textContent</code> : 노드의 텍스트 내용을 설정하거나 반환</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> el = <span class="built_in">document</span>.querySelector(<span class="string">"#blahblah"</span>);</span><br><span class="line"><span class="comment">//el은 객체임</span></span><br><span class="line"></span><br><span class="line">el.tagName</span><br><span class="line"><span class="comment">//해당 노드의 태그명이 나옴</span></span><br><span class="line"></span><br><span class="line">el.textContent</span><br><span class="line"><span class="comment">//해당 노드가 가지고 있는 텍스트 노드들이 출력됨</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>nodeType</code> : 노드의 노드 유형을 숫자로 반환</p>
+</li>
+</ul>
+<h3 id="탐색"><a href="#탐색" class="headerlink" title="탐색"></a>탐색</h3><ul>
+<li><code>childNodes</code><ul>
+<li>엘리먼트의 자식 노드의 노드 리스트 반환(텍스트 노드, 주석 노드 포함)</li>
+</ul>
+</li>
+<li><code>firstChild</code><ul>
+<li>엘리먼트의 첫 번째 자식 노드를 반환</li>
+<li><strong>공백이나 문자열도 첫 자식 요소로 인정</strong></li>
+</ul>
+</li>
+<li><code>firstElementChild</code><ul>
+<li>첫 번째 <strong>자식 엘리먼트</strong>를 반환</li>
+</ul>
+</li>
+<li><code>parentElement</code><ul>
+<li>엘리먼트의 부모 엘리먼트 반환 </li>
+</ul>
+</li>
+<li><code>nextSibling</code><ul>
+<li>동일한 노드 트리 레벨에서 다음 노드를 반환 </li>
+</ul>
+</li>
+<li><code>nextElementSibling</code><ul>
+<li>동일한 노드 트리 레벨에서 다음 엘리먼트 반환</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>이때 브라우저의 주소창은 새 <code>URL</code>로 바뀜</li>
-</ul>
-</li>
-<li><code>서블릿</code>이나 <code>JSP</code>는 리다이렉트하기 위해 <code>HttpServletResponse</code> 클래스의 <code>sendRedirect()</code> 메소드를 사용<ul>
-<li><code>sendRedirect()</code>의 인자로 리다이랙트할  <code>url</code> 을 넣는다</li>
-</ul>
-</li>
-</ul>
-<h3 id="forward"><a href="#forward" class="headerlink" title="forward"></a><code>forward</code></h3><p><img src="https://cphinf.pstatic.net/mooc/20180129_279/1517202070933x0x42_PNG/2_4_2_forward.png" alt=""></p>
+<h3 id="조작"><a href="#조작" class="headerlink" title="조작"></a>조작</h3><blockquote>
+<p>개발자 도구에서 특정 엘리먼트를 클릭하면 콘솔에서 <code>$0</code>으로 접근 가능</p>
+</blockquote>
 <ul>
-<li><p><code>클라이언트</code>에서 <code>Servlet1</code>에게 요청을 보냄</p>
-</li>
-<li><p><code>Servlet1</code>은 요청을 처리한 후 결과를 <code>HttpServletRequest</code>에 저장</p>
+<li><p><code>removeChild()</code></p>
 <ul>
-<li>처리한 결과를 타 서블릿에서 사용하기 위해서는, 전달되는 객체에 저장해야 하기 때문</li>
-<li>최초 요청 받은 서블릿이 일정한 부분만 처리하여 타 서블릿에 넘겨준다</li>
+<li>엘리먼트의 자식 노드 제거 </li>
 </ul>
 </li>
-<li><p><code>HttpServletRequest</code>가 가지고 있는 <code>RequestDispatcher</code> 를 얻어낸다</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RequestDispatcher req_dispatcher = request.getRequestDispatcher(<span class="string">"/경로"</span>);</span><br></pre></td></tr></table></figure>
+<li><p><code>appendChild()</code></p>
 <ul>
-<li>포워드 경로는 반드시 <strong><code>/</code></strong>로 시작해야 한다</li>
+<li>마지막 자식 노드로 자식 노드를 엘리먼트에 추가</li>
 </ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> div = <span class="built_in">document</span>.createElement(<span class="string">"div"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> text = <span class="built_in">document</span>.createTextNode(<span class="string">"blahblah"</span>)</span><br><span class="line"></span><br><span class="line">div.appendChild(text)</span><br><span class="line"></span><br><span class="line">$<span class="number">0.</span>appendChild(div)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><code>RequestDispatcher</code> 객체의 <code>forward()</code> 메서드에 <code>request</code>와 <code>response</code>를 인자로 넣어준다.</p>
+<li><p><code>insertBefore()</code></p>
 <ul>
-<li>즉, <code>request</code> 객체와 <code>response</code> 객체는 모든 서블릿에서 동일하다<ul>
-<li>클라이언트 단 <strong><code>url</code>이 바뀌지 않는다</strong></li>
+<li>기존 자식노드 앞에 새 자식 노드를 추가</li>
 </ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> div = <span class="built_in">document</span>.createElement(<span class="string">"div"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> text = <span class="built_in">document</span>.createTextNode(<span class="string">"blahblah"</span>)</span><br><span class="line"></span><br><span class="line">div.appendChild(text)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> parent = <span class="built_in">document</span>.querySelector(<span class="string">".tableClass tbody"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> front = <span class="built_in">document</span>.querySelector(<span class="string">".tableClass tr:nth-child(3)"</span>)</span><br><span class="line"></span><br><span class="line">parent.insertBefore(div, front)</span><br><span class="line"><span class="comment">// front 앞에 div를 추가</span></span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-</li>
-<li><p><code>Servlet2</code>는 받은 <code>HttpServletRequest</code>와 <code>HttpServletResponse</code>를 이용하여 요청을 처리한 후 클라이언트에게 응답</p>
-</li>
-</ul>
-<h3 id="servlet-amp-jsp-연동"><a href="#servlet-amp-jsp-연동" class="headerlink" title="servlet &amp;jsp 연동"></a><code>servlet</code> &amp;<code>jsp</code> 연동</h3><p> <code>Servlet</code>에서 프로그램 로직이 수행되고, 결과를 <code>JSP</code>에게 포워딩하는 방법이 사용</p>
-<p><img src="https://cphinf.pstatic.net/mooc/20180129_201/1517203743283AcQbB_PNG/2_4_3_servlet_jsp.PNG" alt=""></p>
-<h2 id="Scope"><a href="#Scope" class="headerlink" title="Scope"></a><code>Scope</code></h2><p><img src="https://cphinf.pstatic.net/mooc/20180129_297/1517205425406SvaC6_JPEG/2_5_1_scope_.jpg" alt=""></p>
-<h3 id="page-scope"><a href="#page-scope" class="headerlink" title="page scope"></a><code>page scope</code></h3><ul>
-<li><p>페이지 내에서 지역변수처럼 사용</p>
-</li>
-<li><p><code>PageContext</code> 추상 클래스를 사용</p>
-</li>
-<li><code>JSP</code>페이지에서 <code>pageContext</code>라는 내장 객체로 사용 가능</li>
-<li><code>forward</code>가 될 경우 해당 <code>Page scope</code>에 지정된 변수는 사용 불가<ul>
-<li>새로운 <code>PageContext</code>가 생성</li>
-</ul>
-</li>
-<li><code>jsp</code>에서 <code>pageScope</code>에 값을 저장한 후 해당 값을 EL표기법 등에서 사용할 때 사용</li>
-</ul>
-<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;% pageContext.setAttribute(<span class="string">"blah"</span>, a);</span><br><span class="line">pageContext.getAttribute(<span class="string">"blah"</span>); %&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="request-scope"><a href="#request-scope" class="headerlink" title="request scope"></a><code>request scope</code></h3><ul>
-<li><code>http 요청</code>을 <code>WAS</code>가 받아서 웹 브라우저에게 응답할 때까지 변수값을 유지하고자 할 경우 사용<ul>
-<li><code>request</code>, <code>response</code> 객체는 <code>WAS</code>가 만든다</li>
-</ul>
-</li>
-<li>서블릿에서는 <code>HttpServletRequest</code> 객체를 사용</li>
-<li><code>JSP</code>에서는 <code>request</code> 내장 변수를 사용<ul>
-<li>값을 저장할 때는 <code>request</code> 객체의 <code>setAttribute()</code>메소드를 사용</li>
-<li>값을 읽어 들일 때는 <code>request</code> 객체의 <code>getAttribute()</code> 메소드를 사용</li>
-</ul>
-</li>
-</ul>
-<h3 id="session-scope"><a href="#session-scope" class="headerlink" title="session scope"></a><code>session scope</code></h3><ul>
-<li>클라이언트 별로 변수를 관리하고자 할 경우 사용</li>
-<li>웹 브라우저간의 탭 간에는 세션 정보가 공유되기 때문에, 각각의 탭에서는 같은 세션정보를 사용할 수 있음<ul>
-<li><em>장바구니처럼 사용자별로 유지가 되어야 할 정보가 있을 때 사용</em></li>
-</ul>
-</li>
-<li><code>HttpSession</code> 인터페이스를 구현한 객체를 사용</li>
-<li><code>JSP</code>에서는 <code>session</code> 내장 변수를 사용</li>
-<li><p><code>서블릿</code>에서는 <code>HttpServletRequest</code>의 <code>getSession()</code>메소드를 이용하여 <code>session</code> 객체를 얻는다</p>
+<li><p><code>cloneNode()</code></p>
 <ul>
-<li>값을 저장할 때는 <code>session</code> 객체의 <code>setAttribute()</code> 메소드를 사용</li>
-<li>값을 읽어 들일 때는 <code>session</code> 객체의 <code>getAttribute()</code> 메소드를 사용</li>
+<li>노드를 복제</li>
 </ul>
 </li>
-<li><p>세션 객체는 없어지지 않는다</p>
+<li><p><code>replaceChild()</code></p>
 <ul>
-<li>적당한 시간을 지정하여 자동 소멸 시키거나</li>
-<li>브라우저를 닫을 시 사라지게 만든다</li>
+<li>엘리먼트의 자식 노드 바꿈</li>
+</ul>
+</li>
+<li><p><code>closest()</code></p>
+<ul>
+<li>상위로 올라가면서 가장 가까운  엘리먼트를 반환</li>
+</ul>
+</li>
+<li><p><code>remove()</code></p>
+<ul>
+<li>해당 노드의 엘리먼트를 삭제</li>
 </ul>
 </li>
 </ul>
-<h3 id="application-scope"><a href="#application-scope" class="headerlink" title="application scope"></a><code>application scope</code></h3><ul>
-<li><strong>웹 어플리케이션이 시작되고 종료될 때까지 변수를 사용</strong>할 수 있음</li>
-<li>웹 어플리케이션 하나당 하나의 <code>application</code> 객체가 사용됨</li>
-<li>모든 클라이언트가 공통으로 사용해야 할 값들이 있을 때 사용</li>
-<li><code>ServletContext</code> 인터페이스를 구현한 객체 사용<ul>
-<li><code>jsp</code>에서는 <code>application</code> 내장 객체를 이용</li>
-<li><code>서블릿</code>의 경우는 <code>getServletContext()</code> 메소드를 이용하여 <code>application</code> 객체를 이용</li>
+<h3 id="HTML-문자열-처리"><a href="#HTML-문자열-처리" class="headerlink" title="HTML 문자열 처리"></a>HTML 문자열 처리</h3><ul>
+<li><p><code>innerText</code></p>
+<ul>
+<li>지정된 노드와 <strong>모든 자손의 텍스트</strong> 내용을 설정하거나 반환</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$<span class="number">0.</span>innerText += <span class="string">"추가할 문자열"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>innerHTML</code></p>
+<ul>
+<li>지정된 엘리먼트의 내부 html을 설정하거나 반환</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> change = el.innerHTML</span><br><span class="line"><span class="comment">// 해당 노드의 자손 요소들이 전부 문자열로 출력됨</span></span><br><span class="line"></span><br><span class="line">change.innnerHTML = <span class="string">"&lt;p&gt;blahblah&lt;/p&gt;"</span></span><br><span class="line"><span class="comment">// 해당 노드의 자손 요소들에 덮어씌워짐</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>insertAdjacentHTML()</code></p>
+<ul>
+<li>HTML로 텍스트를 지정된 위치에 삽입</li>
+<li><code>beforebegin</code></li>
+<li><code>afterbegin</code></li>
+<li><code>beforeend</code></li>
+<li><code>afterend</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> div = <span class="built_in">document</span>.querySelecotr(<span class="string">"div"</span>)</span><br><span class="line"></span><br><span class="line">div.insertAdjacentHTML(<span class="string">"afterbegin"</span>, <span class="string">"&lt;p&gt;blahblah&lt;/p&gt;"</span>)</span><br><span class="line"><span class="comment">// div 태그 바로 다음에 p 태그를 넣는다</span></span><br><span class="line"></span><br><span class="line">div.insertAdjacentHTML(<span class="string">"beforebegin"</span>, <span class="string">"&lt;p&gt;blahblah&lt;/p&gt;"</span>)</span><br><span class="line"><span class="comment">// div 태그 위에 p 태그를 붙인다</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="영상에서-다루지-않은-것"><a href="#영상에서-다루지-않은-것" class="headerlink" title="영상에서 다루지 않은 것"></a>영상에서 다루지 않은 것</h2><ul>
+<li><code>tag:nth-of-type(n)</code> : 특정 태그의 <code>n</code> 번째 자식 요소를 찾는다</li>
+<li><code>tag:nth-child(n)</code> : <code>dom</code> 요소 중에서 <code>n</code> 번째 자식 요소를 찾되, <strong>해당 태그가 제대로 명기되어야 해당 노드의 객체</strong>를 가져온다<ul>
+<li>만약 해당 태그가 제대로 명기되지 않았다면 <code>undefined</code>가 뜬다</li>
 </ul>
 </li>
-<li>값을 저장할 때는 <code>application</code>객체의 <code>setAttribute()</code>메소드를 사용</li>
-<li>값을 읽어 들일 때는 <code>application</code>객체의 <code>getAttribute()</code> 메소드를 사용</li>
 </ul>
 
       
@@ -264,7 +315,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/18/">Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><span class="page-number current">19</span><a class="page-number" href="/page/20/">20</a><a class="page-number" href="/page/21/">21</a><span class="space">&hellip;</span><a class="page-number" href="/page/130/">130</a><a class="extend next" rel="next" href="/page/20/">Next</a>
+    <a class="extend prev" rel="prev" href="/page/18/">Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><span class="page-number current">19</span><a class="page-number" href="/page/20/">20</a><a class="page-number" href="/page/21/">21</a><span class="space">&hellip;</span><a class="page-number" href="/page/133/">133</a><a class="extend next" rel="next" href="/page/20/">Next</a>
   </nav>
 
 </section>
@@ -317,7 +368,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/">개발공부</a><span class="category-list-count">100</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/GraphQL/">GraphQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/React/">React</a><span class="category-list-count">25</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/javascript/">javascript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/nodeJS/">nodeJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/뉴딜과정/">뉴딜과정</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/몽고DB/">몽고DB</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/부스트코스/">부스트코스</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/부스트코스/웹-프로그래밍/">웹 프로그래밍</a><span class="category-list-count">10</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/안드로이드/">안드로이드</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/알고리즘-난항일지/">알고리즘 난항일지</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/우아한테크러닝-React-Typescript/">우아한테크러닝(React+Typescript)</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/정보처리기사/">정보처리기사</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/일상/">일상</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/책/">책</a><span class="category-list-count">7</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/">개발공부</a><span class="category-list-count">103</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/GraphQL/">GraphQL</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/React/">React</a><span class="category-list-count">25</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/Vue/">Vue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/javascript/">javascript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/nodeJS/">nodeJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/뉴딜과정/">뉴딜과정</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/몽고DB/">몽고DB</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/부스트코스/">부스트코스</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/부스트코스/웹-프로그래밍/">웹 프로그래밍</a><span class="category-list-count">10</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/안드로이드/">안드로이드</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/알고리즘-난항일지/">알고리즘 난항일지</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/우아한테크러닝-React-Typescript/">우아한테크러닝(React+Typescript)</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/정보처리기사/">정보처리기사</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/일상/">일상</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/책/">책</a><span class="category-list-count">7</span></li></ul>
     </div>
   </div>
 
@@ -365,6 +416,42 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2020/01/24/graphQL_study01/">ABCD의 GraphQL 첫 날 01</a></h6>
+              <span>1월 24, 2020</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2020/01/24/graphQL_study02/">ABCD의 GraphQL 첫 날 02</a></h6>
+              <span>1월 24, 2020</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2020/01/20/vue-intro/">Age of Vue.js</a></h6>
+              <span>1월 20, 2020</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2020/01/01/new-programmers-manual01/">신입 개발자 생존의 기술 - 전문적인 프로그래밍</a></h6>
               <span>1월 1, 2020</span>
             </div>
@@ -395,42 +482,6 @@
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/12/30/functional-thinking05/">함수형 사고, 진화하라</a></h6>
-              <span>12월 30, 2019</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/11/24/nhn2019/">NHN FORWARD</a></h6>
-              <span>11월 24, 2019</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/09/08/frontend-meetup/">FRONT END MEETUP</a></h6>
-              <span>9월 8, 2019</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -441,7 +492,7 @@
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">1월 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">12월 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">11월 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">9월 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">8월 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">7월 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">6월 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">5월 2019</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">4월 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">3월 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">2월 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">1월 2019</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">12월 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">11월 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">10월 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">9월 2018</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">1월 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">12월 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">11월 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">9월 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">8월 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">7월 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">6월 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">5월 2019</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">4월 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">3월 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">2월 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">1월 2019</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">12월 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">11월 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">10월 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">9월 2018</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 

@@ -104,7 +104,7 @@
         
           <section id="main">
   
-    <article id="post-boostcouse-html" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="post-boostcouse-webui" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -112,7 +112,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/07/16/boostcouse-html/">Front-End</a>
+      <a class="article-title" href="/2019/07/19/boostcouse-webui/">WEB UI 개발</a>
     </h1>
   
 
@@ -120,8 +120,8 @@
     
     <div class="article-meta">
       
-	<a href="/2019/07/16/boostcouse-html/" class="article-date">
-	  <time datetime="2019-07-16T06:39:18.000Z" itemprop="datePublished">7월 16, 2019</time>
+	<a href="/2019/07/19/boostcouse-webui/" class="article-date">
+	  <time datetime="2019-07-19T07:05:18.000Z" itemprop="datePublished">7월 19, 2019</time>
 	</a>
 
       
@@ -131,181 +131,103 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Front-End"><a href="#Front-End" class="headerlink" title="Front-End"></a>Front-End</h1><h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><h3 id="Tags"><a href="#Tags" class="headerlink" title="Tags"></a>Tags</h3><p><code>HTML</code> 태그는 굉장히 많은 것들이 있고, 그것들은 모두 다 각각의 쓰임에 대해 <strong>정확한 의미를 지니고 있다(semantic)</strong></p>
+        <h1 id="WEB-UI-개발"><a href="#WEB-UI-개발" class="headerlink" title="WEB UI 개발"></a>WEB UI 개발</h1><h2 id="Window-객체"><a href="#Window-객체" class="headerlink" title="Window 객체"></a>Window 객체</h2><ul>
+<li>디폴트의 개념으로 생략이 가능</li>
+</ul>
+<h3 id="setTimeout"><a href="#setTimeout" class="headerlink" title="setTimeout"></a><code>setTimeout</code></h3><ul>
+<li>인자로 <code>callback</code> 함수를 받는다</li>
+<li>인자로 들어온 <code>callback</code> 함수는 비동기로 실행되기 때문에, <strong>동기적인 실행이 끝난 뒤 실행</strong></li>
+</ul>
+<h2 id="DOM과-querySelector"><a href="#DOM과-querySelector" class="headerlink" title="DOM과 querySelector"></a><code>DOM</code>과 <code>querySelector</code></h2><h3 id="DOM-Document-Object-Model"><a href="#DOM-Document-Object-Model" class="headerlink" title="DOM(Document Object Model)"></a><code>DOM</code>(Document Object Model)</h3><p><img src="https://cphinf.pstatic.net/mooc/20180126_280/1516956194218XFPk5_PNG/2-2-2_Dom_tree.png" alt=""></p>
 <ul>
-<li>필요한 태그를 찾아서 적절한 의미에 맞는 태그를 사용하는 것이 중요</li>
-<li>SEO에 영향을 준다</li>
+<li>브라우저에서는 <code>HTML</code>을 <code>DOM</code>이라는 객체형태의 모델(<code>DOM Tree</code>)로 저장</li>
+<li><code>DOM Tree</code>를 탐색하기 위해 <code>JavaScript</code>로 탐색알고리즘을 구현하는 것은 비효율적<ul>
+<li>브라우저에서는 <code>DOM</code>이라는 개념을 통해 다양한 <code>DOM API</code> 제공</li>
 </ul>
-<h4 id="Layout-Tags"><a href="#Layout-Tags" class="headerlink" title="Layout Tags"></a>Layout Tags</h4><p><img src="https://cphinf.pstatic.net/mooc/20171231_41/15146999078486r8Pv_JPEG/5086.HTML5PageLayout_2.jpg" alt=""></p>
+</li>
+</ul>
+<h4 id="getElementById"><a href="#getElementById" class="headerlink" title="getElementById()"></a><code>getElementById()</code></h4><ul>
+<li>특정 <code>Element</code>가 반환되어 특정 정보들을 뽑아낼 수 있다<ul>
+<li><code>id</code></li>
+<li><code>className</code></li>
+<li><code>style</code></li>
+</ul>
+</li>
+<li>특정 <code>Element</code>가 반환되어 특정 정보들을 대입할 수 있다</li>
+</ul>
+<h4 id="Element-querySelector"><a href="#Element-querySelector" class="headerlink" title="Element.querySelector()"></a><code>Element.querySelector()</code></h4><ul>
+<li><code>CSS Selector</code> 문법을 활용해 <code>DOM</code>에 접근</li>
+<li>최초로 발견한 <code>node</code>만을 반환</li>
+</ul>
+<h5 id="Element-querySelectorAll"><a href="#Element-querySelectorAll" class="headerlink" title="Element.querySelectorAll()"></a><code>Element.querySelectorAll()</code></h5><ul>
+<li>배열 반환</li>
+</ul>
+<h2 id="Event"><a href="#Event" class="headerlink" title="Event"></a>Event</h2><h3 id="이벤트-등록"><a href="#이벤트-등록" class="headerlink" title="이벤트 등록"></a>이벤트 등록</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> element = <span class="built_in">document</span>.querySelector(<span class="string">"#id"</span>);</span><br><span class="line">element.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// e는 이벤트 객체</span></span><br><span class="line">	<span class="comment">// 이벤트 핸들러 / 이벤트 리스너 기술</span></span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="이벤트-객체"><a href="#이벤트-객체" class="headerlink" title="이벤트 객체"></a>이벤트 객체</h3><ul>
+<li><p><code>브라우저</code>는 <code>이벤트 리스너</code>를 호출하면</p>
+</li>
+<li><p>사용자로부터 어떤 이벤트가 발생했는지에 대한 정보를 담은 <code>이벤트 객체</code>를 생성해서 <code>리스너 함수</code>에 전달</p>
+</li>
+</ul>
+<h4 id="event-target"><a href="#event-target" class="headerlink" title="event.target"></a><code>event.target</code></h4><ul>
+<li>이벤트가 발생한 <code>element</code>를 가리킴</li>
+<li><code>DOM Node</code>이므로,  매한가지로 특정 정보를 뽑아내거나 추가할 수 있다</li>
+</ul>
+<h2 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h2><ul>
+<li>XMLHTTPRequest 통신</li>
+<li><strong>비동기 로직</strong></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ajax</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">const</span> oReq = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line"> oReq.addEventListener(<span class="string">"load"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="keyword">this</span>.responseText);</span><br><span class="line">   <span class="comment">// this는 oReq</span></span><br><span class="line"> &#125;);    </span><br><span class="line"> oReq.open(<span class="string">"GET"</span>, <span class="string">"http://www.example.org/getData?data=data"</span>);<span class="comment">//parameter를 붙여서 보낼수있음</span></span><br><span class="line"> oReq.send();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="open"><a href="#open" class="headerlink" title="open()"></a><code>open()</code></h3><ul>
+<li>요청의 준비</li>
+</ul>
+<h3 id="send"><a href="#send" class="headerlink" title="send()"></a><code>send()</code></h3><ul>
+<li>서버로 발송</li>
+</ul>
+<h3 id="load"><a href="#load" class="headerlink" title="load()"></a><code>load()</code></h3><ul>
+<li>응답이 오면 발생하는 이벤트</li>
+<li>콜백 함수 실행<ul>
+<li>이 때의 <code>ajax</code>는 반환되어 콜스택에서 사라짐</li>
+</ul>
+</li>
+</ul>
+<h2 id="디버깅"><a href="#디버깅" class="headerlink" title="디버깅"></a>디버깅</h2><ul>
+<li><code>Pause</code> OR <code>Continue</code><ul>
+<li>평소에는 <code>Pause</code>, 브렉포인트가 잡힌 상태에선 <code>Continue</code></li>
+<li>다른 브레이크포인트가 잡힐 때까지 코드를 진행</li>
+</ul>
+</li>
+<li><code>Step over next function call</code> <ul>
+<li>스텝 오버는 코드 라인을 한 스탭 진행하는데 현재 실행 라인에 함수 실행 코드가 있다면 함수는 실행하는데 함수 안의 코드로는 진입하지 않는다</li>
+<li>즉 라인의 함수를 실행만 한다</li>
+</ul>
+</li>
+<li><code>Step into next function call</code><ul>
+<li>스텝 인투는 스텝 오버와 다르게 현재 실행 라인의 코드에 함수가 있다면 함수 안의 첫 번째 코드로 진입해 들어가 다시 하나씩 라인별로 코드를 실행</li>
+</ul>
+</li>
+<li><code>Step out of current function</code><ul>
+<li>스텝 인투로 들어온 함수를 끝까지 실행하고 밖으로 빠져나와 해당 함수를 실행한 함수로 돌아간다</li>
+</ul>
+</li>
+<li><code>Active</code> / <code>Deactive breakpoint</code> <ul>
+<li>브레이크포인트를 끄거나 켬</li>
+</ul>
+</li>
+<li><code>Pause on exception</code><ul>
+<li>예외가 발생하면 해당 위치에 브레이크포인트를 잡아준다</li>
+</ul>
+</li>
+</ul>
+<h3 id="디버깅하기"><a href="#디버깅하기" class="headerlink" title="디버깅하기"></a>디버깅하기</h3><ul>
+<li>코드 일정 부분에 브레이크 포인트를 잡는다</li>
+<li><p>웹 어플리케이션을 동작한다</p>
 <ul>
-<li><code>header</code>, <code>footer</code>는 사실 <code>div</code> 태그와 같은 일을 하는데, <strong>의미가 다르다</strong></li>
-<li>몇몇의 태그들은 <code>html5</code>를 지원하지 않는 브라우저의 경우 제대로 동작하지 않을 가능성이 있다<ul>
-<li>몇몇 라이브러리들이 변환을 해주는 작업을 수행한다</li>
+<li>화면에 <code>Paused in debugger</code>가 출력된다</li>
+<li>개발자도구 우측에는 어떤 포인트에서 멈춰졌는지 표기된다</li>
 </ul>
 </li>
-</ul>
-<h3 id="class와-id"><a href="#class와-id" class="headerlink" title="class와 id"></a><code>class</code>와 <code>id</code></h3><h4 id="id"><a href="#id" class="headerlink" title="id"></a><code>id</code></h4><ul>
-<li>고유한 속성으로 한 HTML 문서에 <strong>하나만</strong> 사용 가능</li>
-</ul>
-<h4 id="class"><a href="#class" class="headerlink" title="class"></a><code>class</code></h4><ul>
-<li>하나의 HTML 문서 안에 <strong>중복해서 사용 가능</strong></li>
-<li>하나의 태그에 여러 개의 다른 class 이름을 공백을 기준으로 나열 가능</li>
-</ul>
-<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h3 id="CSS의-구성"><a href="#CSS의-구성" class="headerlink" title="CSS의 구성"></a>CSS의 구성</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">selector</span> &#123;</span><br><span class="line">	<span class="attribute">property </span>: value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="CSS-적용-방법"><a href="#CSS-적용-방법" class="headerlink" title="CSS 적용 방법"></a>CSS 적용 방법</h3><h4 id="inline"><a href="#inline" class="headerlink" title="inline"></a>inline</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">tag</span> <span class="attr">style</span>=<span class="string">"property1:value1; property2:value2;"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><code>html</code> 태그 안에 적용</li>
-<li>다른 <code>css</code> 파일에 적용한 것보다 가장 먼저 적용됨</li>
-</ul>
-<h4 id="internal"><a href="#internal" class="headerlink" title="internal"></a>internal</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">      selector &#123;</span></span><br><span class="line"><span class="undefined">        property : value;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><code>&lt;style&gt;</code> 태그로 지정</li>
-<li>장점<ul>
-<li>별도의 <code>css</code> 파일을 관리하지 않아도 된다</li>
-<li>서버에 <code>css</code> 파일 request를 보내지 않아도 된다</li>
-</ul>
-</li>
-<li>단점<ul>
-<li>유지보수가 어렵다</li>
-</ul>
-</li>
-</ul>
-<h4 id="external"><a href="#external" class="headerlink" title="external"></a>external</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"style.css"</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>외부파일(<code>.css</code>)로 만드는 것</li>
-<li>아주 짧은 코드가 아니라면 이 방법이 최선</li>
-</ul>
-<h3 id="상속과-우선순위"><a href="#상속과-우선순위" class="headerlink" title="상속과 우선순위"></a>상속과 우선순위</h3><ul>
-<li>일반적으로 상위에서 적용한 스타일은 자손에게도 반영</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">selector1</span> <span class="selector-tag">selector2</span> &#123;</span><br><span class="line">	<span class="attribute">property </span>: value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><code></code>(띄어쓰기)는 자손 관계를 의미<ul>
-<li><code>selector1</code>의 하위 요소인 <code>selector2</code>의 모든 하위 요소에 스타일 지정</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">selector1</span> &gt; <span class="selector-tag">selector2</span> &#123;</span><br><span class="line">	<span class="attribute">property </span>: value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><code>&gt;</code>는 자식 관계를 의미<ul>
-<li><code>selector1</code>의 바로 직계 하위 요소인 <code>selector2</code>에 스타일 지정</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">prent-selector</span> &gt; <span class="selector-tag">selector</span><span class="selector-pseudo">:nth-child(n)</span> &#123;</span><br><span class="line">	<span class="attribute">property </span>: value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><code>nth-child(n)</code><ul>
-<li><code>prent-selector</code>의 하위 직계 요소의 <code>n</code>번째 자식에게만 스타일 지정</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">selector</span><span class="selector-class">.class</span> &#123;</span><br><span class="line">	<span class="attribute">property </span>: value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>혼합<ul>
-<li><code>selector.class</code><ul>
-<li>특정 셀렉터 중 특정 클래스에만 스타일 지정</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="box-model"><a href="#box-model" class="headerlink" title="box-model"></a>box-model</h4><ul>
-<li>크기, 배치 관련 속성은 <strong>상속이 되지 않는다</strong><br>(<em><code>width</code>, <code>height</code>, <code>margin</code>, <code>padding</code>,<code>border</code></em>)</li>
-<li><code>block Element</code>의 경우 <code>box-moel</code> 속성이 사용된다</li>
-</ul>
-<h5 id="엘리먼트의-크기"><a href="#엘리먼트의-크기" class="headerlink" title="엘리먼트의 크기"></a>엘리먼트의 크기</h5><ul>
-<li><p>기본적으로 부모의 크기만큼 가진다</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">selector</span> &#123;</span><br><span class="line">	<span class="attribute">box-sizing</span>:content-box;</span><br><span class="line">  <span class="comment">/* 이 경우 padding 속성에 따라 크기가 커질 수 있다 */</span></span><br><span class="line">  <span class="attribute">box-sizing</span>:border-box;</span><br><span class="line">  <span class="comment">/* 이 경우 테두리가 박스 사이즈임을 명기했기 때문에 padding 속성을 바꾼다고 해도 크기가 변경되지 않는다 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="일반적인-CSS"><a href="#일반적인-CSS" class="headerlink" title="일반적인 CSS"></a>일반적인 CSS</h4><ol>
-<li><code>liline</code></li>
-<li>나중에 선언된 속성<ul>
-<li><code>internal</code>과 <code>external</code>은 우선 순위가 동등</li>
-</ul>
-</li>
-</ol>
-<h4 id="cascading-우선순위"><a href="#cascading-우선순위" class="headerlink" title="cascading 우선순위"></a>cascading 우선순위</h4><ul>
-<li><strong>구체적</strong>인 것이 먼저 반영</li>
-<li>같은 선택자라면 <strong>나중에 선언된 것이 반영</strong></li>
-</ul>
-<h3 id="CSS-기본-Style-변경"><a href="#CSS-기본-Style-변경" class="headerlink" title="CSS 기본 Style 변경"></a>CSS 기본 Style 변경</h3><h4 id="font"><a href="#font" class="headerlink" title="font"></a>font</h4><ul>
-<li><code>color</code></li>
-<li><p><code>font-size</code></p>
-</li>
-<li><p><code>background</code></p>
-</li>
-<li><code>font-family</code></li>
-</ul>
-<blockquote>
-<h3 id="em-단위"><a href="#em-단위" class="headerlink" title="em 단위"></a><code>em</code> 단위</h3><p>설정된 값 대비 상대적인 크기를 배수로 지정하는 것</p>
-<blockquote>
-<p>만약 <code>16px</code>이 기본 값이라면, <code>2em</code>은 <code>32px</code>이다.</p>
-</blockquote>
-<ul>
-<li><strong><code>font-size</code>는 상속이 된다</strong><ul>
-<li>즉 부모 노드에 상속된 <code>font-size</code>가 무엇이냐에 따라 자식 요소의 <code>em</code> 기준 값이 바뀐다</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<h2 id="CSS-layout"><a href="#CSS-layout" class="headerlink" title="CSS layout"></a>CSS layout</h2><h3 id="렌더링-과정"><a href="#렌더링-과정" class="headerlink" title="렌더링 과정"></a>렌더링 과정</h3><ul>
-<li>엘리먼트를 화면에 배치하는 것</li>
-<li>위에서 아래로, 순서대로 블록을 이루며 배치되는 것이 기본</li>
-</ul>
-<h3 id="display"><a href="#display" class="headerlink" title="display"></a><code>display</code></h3><ul>
-<li>어떤 영역들을 가진 기본 속성<ul>
-<li>위에서 아래로 떨어지는 속성<ul>
-<li><code>block</code></li>
-<li><code>inline-block</code><ul>
-<li><code>div</code></li>
-<li><code>p</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>왼쪽에서 오른쪽으로 흐르는 속성<ul>
-<li><code>inline</code><ul>
-<li><code>span</code></li>
-<li><code>a</code></li>
-<li><code>strong</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="position"><a href="#position" class="headerlink" title="position"></a><code>position</code></h3><ul>
-<li>특별한 값을 가지면서 배치가 되는 속성<ul>
-<li><code>static</code><ul>
-<li>순서대로 배치</li>
-</ul>
-</li>
-<li><code>absolute</code><ul>
-<li><strong>상위 엘리먼트들 중에 <code>static</code> 속성을 가지지 않은 엘리먼트를 기준</strong>으로 위치</li>
-<li>만약 상위의 모든 엘리먼트가 <code>static</code> 속성을 가지고 있다면, <code>body</code> 태그를 기준</li>
-</ul>
-</li>
-<li><code>relative</code><ul>
-<li><strong>원래 자신이 위치해야 할 곳을 기준</strong>으로 상대적인 곳에 위치</li>
-</ul>
-</li>
-<li><code>fixed</code><ul>
-<li><code>viewport</code> 를 기준으로 하여 위치</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="float"><a href="#float" class="headerlink" title="float"></a><code>float</code></h3><ul>
-<li>기본적인 순서에서 벗어나 엘리먼트를 공중에 띄우는 속성</li>
-</ul>
-<h4 id="overflow"><a href="#overflow" class="headerlink" title="overflow"></a><code>overflow</code></h4><ul>
-<li><p><code>float</code> 속성을 지니고 있는 자식 요소를 인식하게 함</p>
-</li>
-<li><p>즉, <strong>부모 엘리먼트에 사용</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">selector</span> &#123;</span><br><span class="line">	<span class="attribute">overflow</span>:auto;</span><br><span class="line">  <span class="comment">/* value로 hidden을 줘도 된다*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>만약 특정 라인까지 실행을 원한다면 <code>script execution</code> 버튼 클릭</p>
 </li>
 </ul>
 
@@ -332,7 +254,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/24/">Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><span class="page-number current">25</span><a class="page-number" href="/page/26/">26</a><a class="page-number" href="/page/27/">27</a><span class="space">&hellip;</span><a class="page-number" href="/page/130/">130</a><a class="extend next" rel="next" href="/page/26/">Next</a>
+    <a class="extend prev" rel="prev" href="/page/24/">Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><span class="page-number current">25</span><a class="page-number" href="/page/26/">26</a><a class="page-number" href="/page/27/">27</a><span class="space">&hellip;</span><a class="page-number" href="/page/133/">133</a><a class="extend next" rel="next" href="/page/26/">Next</a>
   </nav>
 
 </section>
@@ -385,7 +307,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/">개발공부</a><span class="category-list-count">100</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/GraphQL/">GraphQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/React/">React</a><span class="category-list-count">25</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/javascript/">javascript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/nodeJS/">nodeJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/뉴딜과정/">뉴딜과정</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/몽고DB/">몽고DB</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/부스트코스/">부스트코스</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/부스트코스/웹-프로그래밍/">웹 프로그래밍</a><span class="category-list-count">10</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/안드로이드/">안드로이드</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/알고리즘-난항일지/">알고리즘 난항일지</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/우아한테크러닝-React-Typescript/">우아한테크러닝(React+Typescript)</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/정보처리기사/">정보처리기사</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/일상/">일상</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/책/">책</a><span class="category-list-count">7</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/">개발공부</a><span class="category-list-count">103</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/GraphQL/">GraphQL</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/React/">React</a><span class="category-list-count">25</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/Vue/">Vue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/javascript/">javascript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/nodeJS/">nodeJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/뉴딜과정/">뉴딜과정</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/몽고DB/">몽고DB</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/부스트코스/">부스트코스</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/부스트코스/웹-프로그래밍/">웹 프로그래밍</a><span class="category-list-count">10</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/안드로이드/">안드로이드</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/알고리즘-난항일지/">알고리즘 난항일지</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/우아한테크러닝-React-Typescript/">우아한테크러닝(React+Typescript)</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/정보처리기사/">정보처리기사</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/일상/">일상</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/책/">책</a><span class="category-list-count">7</span></li></ul>
     </div>
   </div>
 
@@ -433,6 +355,42 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2020/01/24/graphQL_study01/">ABCD의 GraphQL 첫 날 01</a></h6>
+              <span>1월 24, 2020</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2020/01/24/graphQL_study02/">ABCD의 GraphQL 첫 날 02</a></h6>
+              <span>1월 24, 2020</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2020/01/20/vue-intro/">Age of Vue.js</a></h6>
+              <span>1월 20, 2020</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2020/01/01/new-programmers-manual01/">신입 개발자 생존의 기술 - 전문적인 프로그래밍</a></h6>
               <span>1월 1, 2020</span>
             </div>
@@ -463,42 +421,6 @@
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/12/30/functional-thinking05/">함수형 사고, 진화하라</a></h6>
-              <span>12월 30, 2019</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/11/24/nhn2019/">NHN FORWARD</a></h6>
-              <span>11월 24, 2019</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/09/08/frontend-meetup/">FRONT END MEETUP</a></h6>
-              <span>9월 8, 2019</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -509,7 +431,7 @@
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">1월 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">12월 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">11월 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">9월 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">8월 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">7월 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">6월 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">5월 2019</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">4월 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">3월 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">2월 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">1월 2019</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">12월 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">11월 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">10월 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">9월 2018</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">1월 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">12월 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">11월 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">9월 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">8월 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">7월 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">6월 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">5월 2019</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">4월 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">3월 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">2월 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">1월 2019</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">12월 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">11월 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">10월 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">9월 2018</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 

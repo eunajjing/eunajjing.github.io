@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>ABCD의 GraphQL 첫 날 01 | ERecord</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta name="description" content="GraphQL Study01GraphQL이란? API를 만들 때 사용할 수 있는 쿼리 언어  타입 시스템을 사용하여 쿼리를 실행하는 서버사이드 런타임  런타임(runtime) : 컴퓨터 프로그램이 실행되고 있는 동안의 동작   쿼리를 실행하고 이에 대한에 데이터를 받을 수 있는 런타임   GraphQL은 선언형(declarative) 데이터 패칭(fetch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ABCD의 GraphQL 첫 날 01">
+<meta property="og:url" content="http://eunajjing.github.io/2020/01/24/graphQL_study01/index.html">
+<meta property="og:site_name" content="ERecord">
+<meta property="og:description" content="GraphQL Study01GraphQL이란? API를 만들 때 사용할 수 있는 쿼리 언어  타입 시스템을 사용하여 쿼리를 실행하는 서버사이드 런타임  런타임(runtime) : 컴퓨터 프로그램이 실행되고 있는 동안의 동작   쿼리를 실행하고 이에 대한에 데이터를 받을 수 있는 런타임   GraphQL은 선언형(declarative) 데이터 패칭(fetch">
+<meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2020-01-24T10:15:02.682Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ABCD의 GraphQL 첫 날 01">
+<meta name="twitter:description" content="GraphQL Study01GraphQL이란? API를 만들 때 사용할 수 있는 쿼리 언어  타입 시스템을 사용하여 쿼리를 실행하는 서버사이드 런타임  런타임(runtime) : 컴퓨터 프로그램이 실행되고 있는 동안의 동작   쿼리를 실행하고 이에 대한에 데이터를 받을 수 있는 런타임   GraphQL은 선언형(declarative) 데이터 패칭(fetch">
+  
+    <link rel="alternate" href="/atom.xml" title="ERecord" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/fashion.css">
+  <link rel="stylesheet" href="/css/glyphs.css">
+
+</head>
+</html>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="ERecord" rel="home"> ERecord </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">일상 및 개발 공부 기록용 블로그</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="https://www.notion.so/eunako-attr-every_day-study_hard-ebb1a09d24734280aba94018d13df0a1">About</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="https://www.notion.so/bookmarks-3b11361b4a07466f9fa0236e5f762c87">bookmark</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-graphQL_study01" style="width: 66%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      ABCD의 GraphQL 첫 날 01
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/01/24/graphQL_study01/" class="article-date">
+	  <time datetime="2020-01-24T06:43:18.000Z" itemprop="datePublished">1월 24, 2020</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/개발공부/">개발공부</a>, <a class="article-category-link" href="/categories/개발공부/GraphQL/">GraphQL</a>
+ 
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="GraphQL-Study01"><a href="#GraphQL-Study01" class="headerlink" title="GraphQL Study01"></a>GraphQL Study01</h1><h2 id="GraphQL이란"><a href="#GraphQL이란" class="headerlink" title="GraphQL이란?"></a><code>GraphQL</code>이란?</h2><ul>
+<li><p><code>API</code>를 만들 때 사용할 수 있는 쿼리 언어</p>
+</li>
+<li><p>타입 시스템을 사용하여 쿼리를 실행하는 서버사이드 런타임</p>
+<blockquote>
+<p>런타임(<code>runtime</code>) : 컴퓨터 프로그램이 실행되고 있는 동안의 동작</p>
+</blockquote>
+<ul>
+<li>쿼리를 실행하고 이에 대한에 데이터를 받을 수 있는 런타임</li>
+</ul>
+</li>
+<li><p><code>GraphQL</code>은 선언형(<code>declarative</code>) 데이터 패칭(<code>fetching</code>) 언어</p>
+</li>
+<li>특정 언어, 프레임워크와 무관</li>
+</ul>
+<h3 id="특징"><a href="#특징" class="headerlink" title="특징"></a>특징</h3><ul>
+<li>위계적<ul>
+<li>필드 내에 필드가 중첩 가능</li>
+<li>쿼리와 그에 대한 반환 데이터는 형태가 서로 같다.</li>
+</ul>
+</li>
+<li>제품 중심적<ul>
+<li>클라이언트가 요구하는 데이터와 클라이언트가 지원하는 언어 및 런타임에 맞춰 동작</li>
+</ul>
+</li>
+<li>엄격한 타입 제한<ul>
+<li><code>GraphQL</code> 서버는 <code>GraphQL</code> 타입 시스템을 사용</li>
+<li>스키마 데이터 포인트마다 특정 타입을 명시, 이를 기초로 유효성 검사</li>
+</ul>
+</li>
+<li>클라이언트 맞춤 쿼리<ul>
+<li><code>GraphQL</code> 서버는 클라이언트 쪽에서 받아서 사용 할 수 있는 데이터를 제공</li>
+</ul>
+</li>
+<li>인트로스펙티브(<code>introspective</code>) <ul>
+<li>스키마 확인 가능</li>
+</ul>
+</li>
+</ul>
+<h3 id="기존-REST의-문제"><a href="#기존-REST의-문제" class="headerlink" title="기존 REST의 문제"></a>기존 <code>REST</code>의 문제</h3><ul>
+<li><p>오버패칭</p>
+<ul>
+<li>클라이언트 측에서 필요하지 않은 데이터까지 수신하는 경우가 다수</li>
+</ul>
+<blockquote>
+<p><code>ex</code>. 현재 페이체크 측 관리자 페이지에서 회사 이름만을 받아오고 싶은데, 회사 전체 정보를 수신하고 있음</p>
+</blockquote>
+</li>
+<li><p>언더패칭</p>
+<ul>
+<li>필요한 데이터를 요청하기 위해 서브데이터를 추가적으로 요청해야 하는 경우, 서버에 2번의 요청 필요</li>
+</ul>
+</li>
+<li><p>유연성 부족</p>
+<ul>
+<li>하나의 기능을 만들 때마다 엔드포인트가 늘어나는 구조</li>
+</ul>
+</li>
+</ul>
+<h2 id="쿼리어"><a href="#쿼리어" class="headerlink" title="쿼리어"></a>쿼리어</h2><ul>
+<li><p><code>query</code></p>
+<ul>
+<li><code>select</code></li>
+</ul>
+</li>
+<li><p><code>mutation</code></p>
+<ul>
+<li><code>insert</code>, <code>update</code>, <code>delete</code></li>
+</ul>
+</li>
+<li><p><code>subscription</code></p>
+<ul>
+<li>데이터에 변화가 생기면 알림을 주는 형태</li>
+</ul>
+</li>
+</ul>
+<h3 id="query"><a href="#query" class="headerlink" title="query"></a><code>query</code></h3><blockquote>
+<p><a href="https://graphql-kr.github.io/learn/queries/#" target="_blank" rel="noopener">실습 가능 링크</a></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">query &#123;</span><br><span class="line">	hero &#123;</span><br><span class="line">		name</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>query</code> 키워드는 생략 가능</p>
+<p>위의 코드는 아래와 같다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; &#123;</span><br><span class="line">&gt; 	hero &#123;</span><br><span class="line">&gt; 		name</span><br><span class="line">&gt; 	&#125;</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>위의 요청을 해석하면, <em><code>hero</code>란 이름으로 정의된 타입에서 <code>name</code>만 가지고 와달라</em>, 가 되며 서버에서 제대로 정의가 되어 있다면 아래가 응답이 된다.</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"data"</span>: &#123;</span><br><span class="line">    <span class="attr">"hero"</span>: &#123;</span><br><span class="line">      <span class="attr">"name"</span>: <span class="string">"R2-D2"</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>응답은 항상 <code>data</code>라는 필드 안에 존재한다.</p>
+<p>여기서 눈여겨 보아야 할 것은 <strong>쿼리와 결과가 정확히 동일하다</strong>는 점</p>
+<p><code>GraphQL</code> 쿼리는 연관된 객체와 필드를 탐색할 수 있기에, 기존 <code>REST</code>의 <strong>언더패칭</strong>의 문제 해결 가능</p>
+<ul>
+<li><p>요청</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	hero &#123;</span><br><span class="line">		name</span><br><span class="line">		friends &#123;</span><br><span class="line">			name</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>응답</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"data"</span>: &#123;</span><br><span class="line">    <span class="attr">"hero"</span>: &#123;</span><br><span class="line">      <span class="attr">"name"</span>: <span class="string">"R2-D2"</span>,</span><br><span class="line">      <span class="attr">"friends"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"name"</span>: <span class="string">"Luke Skywalker"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"name"</span>: <span class="string">"Han Solo"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"name"</span>: <span class="string">"Leia Organa"</span></span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="조건-query"><a href="#조건-query" class="headerlink" title="조건 query"></a>조건 <code>query</code></h4><p>인자를 주는 것으로 해당 조건에 맞는 것만을 조회도 가능</p>
+<ul>
+<li><p>요청</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  human(id: &quot;1000&quot;) &#123;</span><br><span class="line">    name</span><br><span class="line">    height</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>응답</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"data"</span>: &#123;</span><br><span class="line">    <span class="attr">"human"</span>: &#123;</span><br><span class="line">      <span class="attr">"name"</span>: <span class="string">"Luke Skywalker"</span>,</span><br><span class="line">      <span class="attr">"height"</span>: <span class="number">1.72</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><code>REST</code>의 경우 단일 인자만 전달 가능한 반면, <code>GraphQL</code>은 객체 전체를 전달도 가능</p>
+<h4 id="여러-번의-요청을-한-번에"><a href="#여러-번의-요청을-한-번에" class="headerlink" title="여러 번의 요청을 한 번에"></a>여러 번의 요청을 한 번에</h4><ul>
+<li><p>요청</p>
+<ul>
+<li><p>요청해야 하는 건은 다음과 같다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">query lifts &#123;</span><br><span class="line">  allLifts &#123;</span><br><span class="line">    name</span><br><span class="line">    status</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">query trails &#123;</span><br><span class="line">  allTrails &#123;</span><br><span class="line">    name</span><br><span class="line">    difficulty</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>그러면 이렇게 하나의 레이블로 묶어 요청도 가능하다</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">query allList &#123;</span><br><span class="line">  allLifts &#123;</span><br><span class="line">    name</span><br><span class="line">    status</span><br><span class="line">  &#125;</span><br><span class="line">  allTrails &#123;</span><br><span class="line">    name</span><br><span class="line">    difficulty</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>응답</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"data"</span>: &#123;</span><br><span class="line">    <span class="attr">"allLifts"</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">"name"</span>: <span class="string">"Astra Express"</span>,</span><br><span class="line">        <span class="attr">"status"</span>: <span class="string">"OPEN"</span></span><br><span class="line">      &#125;,</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">"allTrails"</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">"name"</span>: <span class="string">"Blue Bird"</span>,</span><br><span class="line">        <span class="attr">"difficulty"</span>: <span class="string">"intermediate"</span></span><br><span class="line">      &#125;,</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p><strong>레이블</strong></p>
+<p>일명 작업 타입. 디버깅이나 서버 측에서 로깅하는데 사용하며 문제 발생 시 로그에 찍힌 레이블을 확인해 어디가 문제인지 확인 가능</p>
+</blockquote>
+<h4 id="별칭"><a href="#별칭" class="headerlink" title="별칭"></a>별칭</h4><p>DB와 매한가지로, 일명 <code>as</code> 기능을 쿼리 단에서 제공</p>
+<ul>
+<li><p>요청</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  empireHero: hero(episode: &quot;EMPIRE&quot;) &#123;</span><br><span class="line">    name</span><br><span class="line">  &#125;</span><br><span class="line">  jediHero: hero(episode: &quot;JEDI&quot;) &#123;</span><br><span class="line">    name</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>응답</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"data"</span>: &#123;</span><br><span class="line">    <span class="attr">"empireHero"</span>: &#123;</span><br><span class="line">      <span class="attr">"name"</span>: <span class="string">"Luke Skywalker"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"jediHero"</span>: &#123;</span><br><span class="line">      <span class="attr">"name"</span>: <span class="string">"R2-D2"</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="프래그먼트"><a href="#프래그먼트" class="headerlink" title="프래그먼트"></a>프래그먼트</h4><p>재사용 가능한 단위</p>
+<h5 id="어떨-때-쓰나요"><a href="#어떨-때-쓰나요" class="headerlink" title="어떨 때 쓰나요?"></a>어떨 때 쓰나요?</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">query &#123;</span><br><span class="line">  Lift (id: &quot;jazz-cat&quot;) &#123;</span><br><span class="line">    name</span><br><span class="line">    status</span><br><span class="line">    capacity</span><br><span class="line">    night</span><br><span class="line">    elevationGain</span><br><span class="line">    trailAccess&#123;</span><br><span class="line">      name</span><br><span class="line">      difficulty</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  Trail(id: &quot;river-run&quot;) &#123;</span><br><span class="line">    name</span><br><span class="line">    difficulty</span><br><span class="line">    accessedByLifts &#123;</span><br><span class="line">      name</span><br><span class="line">      status</span><br><span class="line">      capacity</span><br><span class="line">      night</span><br><span class="line">      elevationGain</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>현재 <code>name</code>, <code>status</code>, <code>capacity</code>, <code>night</code>, <code>elevationGain</code> 필드가 중복</p>
+<p>이런 경우, 서버에서 어떤 타입에 정의된 것인지  <code>on</code> 뒤에 기재해준 뒤 <code>fragment</code>를 먼저 선언하고</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fragment liftInfo on Lift &#123;</span><br><span class="line">  name</span><br><span class="line">  status</span><br><span class="line">  capacity</span><br><span class="line">  night</span><br><span class="line">  elevationGain</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>실제 조회 단에서 해당 정의를 사용</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  Lift(id: &quot;jazz-cat&quot;) &#123;</span><br><span class="line">    ...liftInfo</span><br><span class="line">    trailAccess&#123;</span><br><span class="line">      name</span><br><span class="line">      difficulty</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  Trail(id: &quot;river-run&quot;) &#123;</span><br><span class="line">    name</span><br><span class="line">    difficulty</span><br><span class="line">    accessedByLifts &#123;</span><br><span class="line">      ...liftInfo</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>실제로 서버로 요청되는 것은 위에 중복이 많은 코드와 동일</p>
+</blockquote>
+<h3 id="변수"><a href="#변수" class="headerlink" title="변수"></a>변수</h3><p>동적 값을 정적으로 타이핑했던 쿼리를 지우고, 이를 별도로 전달하기</p>
+<ul>
+<li><p>요청</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">query HeroNameAndFriends($episode: Episode) &#123;</span><br><span class="line">  hero(episode: $episode) &#123;</span><br><span class="line">    name</span><br><span class="line">    friends &#123;</span><br><span class="line">      name</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>요청 파라미터</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"episode"</span>: <span class="string">"JEDI"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>응답</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"data"</span>: &#123;</span><br><span class="line">    <span class="attr">"hero"</span>: &#123;</span><br><span class="line">      <span class="attr">"name"</span>: <span class="string">"R2-D2"</span>,</span><br><span class="line">      <span class="attr">"friends"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"name"</span>: <span class="string">"Luke Skywalker"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"name"</span>: <span class="string">"Han Solo"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"name"</span>: <span class="string">"Leia Organa"</span></span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="변수의-정의-episode-Episode"><a href="#변수의-정의-episode-Episode" class="headerlink" title="변수의 정의 ($episode: Episode)"></a>변수의 정의 <code>($episode: Episode)</code></h4><ul>
+<li><p><code>$episode</code>의 변수 타입은 <code>Episode</code>임을 선언</p>
+</li>
+<li><p>모든 변수는 서버에서 일치하는 입력 타입이어야 한다</p>
+<blockquote>
+<p>아마 위의 예제에서 서버는 <code>Episode</code> 타입이 정의되어 있고, <code>string</code>을 문자열로 요구할 것임을 유추 가능</p>
+<p>자세한 변수 선언은 따로 정리 예정</p>
+</blockquote>
+</li>
+<li><p><strong>만약 필수 인자라면</strong></p>
+<ul>
+<li><code>($episode : Episode!)</code></li>
+</ul>
+</li>
+<li><p><strong>기본 값을 정의하고자 한다면</strong></p>
+<ul>
+<li><code>($episode: Episode = &quot;JEDI&quot;)</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="mutation"><a href="#mutation" class="headerlink" title="mutation"></a><code>mutation</code></h3><ul>
+<li><p>요청</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mutation ($ep: Episode!, $review: ReviewInput!) &#123;</span><br><span class="line">  createReview(episode: $ep, review: $review) &#123;</span><br><span class="line">    stars</span><br><span class="line">    commentary</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><code>Episode</code>, <code>ReviewInput</code> 타입을 받는 <code>mutation</code></li>
+<li>그 중 <code>createReview</code> 타입인 것을 찾아서</li>
+<li><code>episode</code>와 <code>review</code>를 넣고</li>
+<li>해당 데이터(막 만든 데이터)의 <code>stars</code>, <code>commentary</code>를 반환</li>
+</ol>
+<ul>
+<li><p>요청 파라미터</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"ep"</span>: <span class="string">"JEDI"</span>,</span><br><span class="line">  <span class="attr">"review"</span>: &#123;</span><br><span class="line">    <span class="attr">"stars"</span>: <span class="number">5</span>,</span><br><span class="line">    <span class="attr">"commentary"</span>: <span class="string">"This is a great movie!"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>응답</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"data"</span>: &#123;</span><br><span class="line">    <span class="attr">"createReview"</span>: &#123;</span><br><span class="line">      <span class="attr">"stars"</span>: <span class="number">5</span>,</span><br><span class="line">      <span class="attr">"commentary"</span>: <span class="string">"This is a great movie!"</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="query-필드와-mutation-필드의-차이"><a href="#query-필드와-mutation-필드의-차이" class="headerlink" title="query 필드와  mutation 필드의 차이"></a><code>query</code> 필드와  <code>mutation</code> 필드의 차이</h3><ul>
+<li><code>query</code> 필드는 병렬로 실행</li>
+<li><strong><code>mutation</code> 필드는 하나씩 차례로 실행</strong><ul>
+<li>하나의 요청에서 두 개의 뮤테이션을 보낸다고 가정하면 처음 보낸 요청은 두 번째 요청 전에 완료되는 것이 보장된다</li>
+</ul>
+</li>
+</ul>
+<h3 id="subscription"><a href="#subscription" class="headerlink" title="subscription"></a><code>subscription</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">subscription &#123;</span><br><span class="line">    liftStatusChange &#123;</span><br><span class="line">        name</span><br><span class="line">        capacity</span><br><span class="line">        status</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>위의 쿼리가 실행되면, <code>listen</code> 상태가 되며 다른 요청에 의해 <code>mutation</code>이 되면 <code>name</code>, <code>capacity</code>, <code>status</code>를 반환</p>
+<blockquote>
+<p><code>facebook</code>에서 누군가 내 게시글에 <code>like</code>를 누르면 알림이 오는 시스템 등에 이용</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/개발공부/">개발공부</a>, <a class="article-category-link" href="/categories/개발공부/GraphQL/">GraphQL</a>
+
+      
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/01/24/graphQL_study02/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ABCD의 GraphQL 첫 날 02</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GraphQL-Study01"><span class="nav-number">1.</span> <span class="nav-text">GraphQL Study01</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#GraphQL이란"><span class="nav-number">1.1.</span> <span class="nav-text">GraphQL이란?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#특징"><span class="nav-number">1.1.1.</span> <span class="nav-text">특징</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#기존-REST의-문제"><span class="nav-number">1.1.2.</span> <span class="nav-text">기존 REST의 문제</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#쿼리어"><span class="nav-number">1.2.</span> <span class="nav-text">쿼리어</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#query"><span class="nav-number">1.2.1.</span> <span class="nav-text">query</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#조건-query"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">조건 query</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#여러-번의-요청을-한-번에"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">여러 번의 요청을 한 번에</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#별칭"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">별칭</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#프래그먼트"><span class="nav-number">1.2.1.4.</span> <span class="nav-text">프래그먼트</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#어떨-때-쓰나요"><span class="nav-number">1.2.1.4.1.</span> <span class="nav-text">어떨 때 쓰나요?</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#변수"><span class="nav-number">1.2.2.</span> <span class="nav-text">변수</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#변수의-정의-episode-Episode"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">변수의 정의 ($episode: Episode)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mutation"><span class="nav-number">1.2.3.</span> <span class="nav-text">mutation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#query-필드와-mutation-필드의-차이"><span class="nav-number">1.2.4.</span> <span class="nav-text">query 필드와  mutation 필드의 차이</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#subscription"><span class="nav-number">1.2.5.</span> <span class="nav-text">subscription</span></a></li></ol></li></ol></li></ol>
+    
+    </div>
+  </aside>
+
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="https://www.notion.so/eunako-attr-every_day-study_hard-ebb1a09d24734280aba94018d13df0a1" class="mobile-nav-link">About</a>
+  
+    <a href="https://www.notion.so/bookmarks-3b11361b4a07466f9fa0236e5f762c87" class="mobile-nav-link">Bookmark</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2020 ERecord All Rights Reserved.
+        
+      </div>
+ </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

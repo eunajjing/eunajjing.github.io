@@ -104,7 +104,7 @@
         
           <section id="main">
   
-    <article id="post-tech-woman-session" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="post-boostcouse-servlet" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -112,7 +112,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/07/05/tech-woman-session/">테크우먼 세션에 다녀왔다</a>
+      <a class="article-title" href="/2019/07/17/boostcouse-servlet/">Back-End</a>
     </h1>
   
 
@@ -120,127 +120,305 @@
     
     <div class="article-meta">
       
-	<a href="/2019/07/05/tech-woman-session/" class="article-date">
-	  <time datetime="2019-07-05T08:13:18.000Z" itemprop="datePublished">7월 5, 2019</time>
+	<a href="/2019/07/17/boostcouse-servlet/" class="article-date">
+	  <time datetime="2019-07-17T11:36:18.000Z" itemprop="datePublished">7월 17, 2019</time>
 	</a>
 
       
 	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/일상/">일상</a>
+    <a class="article-category-link" href="/categories/개발공부/">개발공부</a>, <a class="article-category-link" href="/categories/개발공부/부스트코스/">부스트코스</a>, <a class="article-category-link" href="/categories/개발공부/부스트코스/웹-프로그래밍/">웹 프로그래밍</a>
  
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="테크우먼-세션"><a href="#테크우먼-세션" class="headerlink" title="테크우먼 세션"></a>테크우먼 세션</h1><h2 id="세션-요약"><a href="#세션-요약" class="headerlink" title="세션 요약"></a>세션 요약</h2><h3 id="나는-잘-할-수-있을까-나를-끝없이-좀먹는-의문과-맞서싸우기"><a href="#나는-잘-할-수-있을까-나를-끝없이-좀먹는-의문과-맞서싸우기" class="headerlink" title="나는 잘 할 수 있을까 : 나를 끝없이 좀먹는 의문과 맞서싸우기"></a>나는 잘 할 수 있을까 : 나를 끝없이 좀먹는 의문과 맞서싸우기</h3><h4 id="먼지-차별-일상적으로-겪는-차별"><a href="#먼지-차별-일상적으로-겪는-차별" class="headerlink" title="먼지 차별 : 일상적으로 겪는 차별"></a>먼지 차별 : 일상적으로 겪는 차별</h4><p>여성들이 겪는 먼지 차별은 다음과 같다.</p>
-<ul>
-<li>전문 분야에서의 판단을 의심</li>
-<li>유능함을 입증하기 위해 더 많은 증거 요구</li>
-<li>격식에 맞지 않는 호칭 사용</li>
-<li>실제 지위보다 낮은 직위로 오인</li>
-<li>업무 기여도를 자주 무시당함</li>
-<li>자신 혹은 비슷한 사람들을 평가절하하는 발언</li>
+        <h1 id="Back-End"><a href="#Back-End" class="headerlink" title="Back-End"></a>Back-End</h1><h2 id="개발-환경-설정"><a href="#개발-환경-설정" class="headerlink" title="개발 환경 설정"></a>개발 환경 설정</h2><h3 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h3><p><code>JAVA</code> 언어로 작성된 소스를 컴파일하고 관리하는데 사용하는 도구로, 컴파일한 결과를 실행하기 위해 <code>JRE</code>가 포함되어 있다.</p>
+<h4 id="JRE-Java-SE-Runtime-Environment"><a href="#JRE-Java-SE-Runtime-Environment" class="headerlink" title="JRE(Java SE Runtime Environment)"></a>JRE(Java SE Runtime Environment)</h4><p><code>JAVA</code> 언어로 작성된 프로그램을 실행하기 위한 프로그램</p>
+<h4 id="JDK가-OS-별로-설치-파일을-제공하는-이유"><a href="#JDK가-OS-별로-설치-파일을-제공하는-이유" class="headerlink" title="JDK가 OS 별로 설치 파일을 제공하는 이유"></a>JDK가 OS 별로 설치 파일을 제공하는 이유</h4><p><code>JAVA</code>는 운영체제에 독립적으로 작동한다. 독립적으로 파일이 실행되기 위해서는 실행되는 환경 즉, <code>JRE</code>가 제대고 갖춰져 있어야 하며, 이 때문에 <code>JDK</code>를 설치할 때 운영체제별로 다르게 설치해야 한다.</p>
+<h4 id="JAVA-환경설정"><a href="#JAVA-환경설정" class="headerlink" title="JAVA 환경설정"></a>JAVA 환경설정</h4><p>시스템 환경 설정을 하는 방법은 운영체제에 따라서 다르다. </p>
+<h3 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h3><ul>
+<li>아파치 소프트웨어 재단에서 개발한 WAS(Web Application Server)</li>
+<li><p>오픈소스</p>
+</li>
+<li><p>기본적으로 <code>8080</code> 포트로 실행된다</p>
+</li>
 </ul>
-<p>직장생활을 하고 있는 이들을 대상으로 조사한 결과, 여성이 남성보다 차별을 겪고 있음이 나타났다. 특히 직장 내 유일한 여성인 경우 더 많은 차별을 당했다고 응답했다. 반면 직장 내 유일한 남성인 경우, 일반적인 남성보다 차별을 덜 받았다고 응답했다.</p>
-<p>여성은 자신의 실패가 여성의 실패로 귀결될까 두려워하는 경향이 크다.</p>
+<h3 id="서블릿-컴파일-및-실행"><a href="#서블릿-컴파일-및-실행" class="headerlink" title="서블릿 컴파일 및 실행"></a>서블릿 컴파일 및 실행</h3><h4 id="시작하기-전에"><a href="#시작하기-전에" class="headerlink" title="시작하기 전에"></a>시작하기 전에</h4><ul>
+<li><code>Target runtime</code> 설정<ul>
+<li>최초 사용 시 <code>WAS</code>로 사용할 톰캣을 지정하되, 향후 만들 웹 어플리케이션은 기존 runtime을 사용하도록 설정하는 게 편하다</li>
+</ul>
+</li>
+</ul>
+<h4 id="서블릿"><a href="#서블릿" class="headerlink" title="서블릿"></a>서블릿</h4><ul>
+<li><code>url</code> 요청을 처리하는 프로그램</li>
+<li>서블릿 생성 시 <code>url mappings</code> 확인이 중요하다<ul>
+<li><code>프로토콜://ip(서버 도메인):포트/프로젝트명/url mapping</code></li>
+</ul>
+</li>
+</ul>
+<h5 id="doGet-HttpServletRequest-HttpServletResponse"><a href="#doGet-HttpServletRequest-HttpServletResponse" class="headerlink" title="doGet(HttpServletRequest, HttpServletResponse)"></a><code>doGet(HttpServletRequest, HttpServletResponse)</code></h5><ul>
+<li>클라이언트가 <code>get</code> 메서드 요청 시 호출되는 메서드</li>
+</ul>
+<h6 id="HttpServletResponse"><a href="#HttpServletResponse" class="headerlink" title="HttpServletResponse"></a><code>HttpServletResponse</code></h6><ul>
+<li><p>응답할 내용을 모아 추상화해놓은 객체</p>
+</li>
+<li><p><code>HttpServletResponse.setContentType()</code></p>
+<ul>
+<li><p>클라이언트에게 응답 결과를 알려줄 용도로, 이 타입을 보고 브라우저가 해석</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> </span>&#123;</span><br><span class="line">	response.setContextType(<span class="string">"text/html;charset=UTF-8"</span>);</span><br><span class="line">  <span class="comment">// 보내는 text는 html 파일이다</span></span><br><span class="line">  <span class="comment">// 해당 파일의 인코딩은 utf-8</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>HttpServletResponse.getWriter()</code></p>
+<ul>
+<li><code>PrintWriter</code> 객체 리턴</li>
+</ul>
+</li>
+<li><p><code>PrintWriter(&quot;&quot;)</code></p>
+<ul>
+<li>파라미터 안에 <code>html</code> 태그를 넣을 수도 있다</li>
+</ul>
+</li>
+</ul>
+<h2 id="Servlet"><a href="#Servlet" class="headerlink" title="Servlet"></a>Servlet</h2><ul>
+<li>자바 웹 어플리케이션의 구성요소 중 동적인 처리를 하는 프로그램의 역할</li>
+<li><code>WAS</code>에 동작하는 <code>JAVA</code> 클래스</li>
+<li>서블릿은 HttpServlet 클래스를 상속</li>
+<li>대개<ul>
+<li>웹 페이지를 구성하는 화면(HTML)은 JSP로 표현</li>
+<li>복잡한 프로그래밍은 서블릿으로 구현</li>
+</ul>
+</li>
+</ul>
+<h3 id="자바-웹-어플리케이션의-폴더-구조"><a href="#자바-웹-어플리케이션의-폴더-구조" class="headerlink" title="자바 웹 어플리케이션의 폴더 구조"></a>자바 웹 어플리케이션의 폴더 구조</h3><p><img src="https://cphinf.pstatic.net/mooc/20180124_133/15167752967943AqfC_PNG/1_5_1_____.PNG" alt=""></p>
+<h4 id="WEB-INF"><a href="#WEB-INF" class="headerlink" title="WEB-INF"></a><code>WEB-INF</code></h4><h5 id="web-xml"><a href="#web-xml" class="headerlink" title="web.xml"></a><code>web.xml</code></h5><ul>
+<li>해당 웹 어플리케이션에 대한 정보들을 다 지니고 있는 파일<ul>
+<li>클라이언트가 요청할 때 해당 <code>URL</code>로 요청을 하게 되면 <code>servlet-name</code>이 같은 서블릿을 찾아 특정 패키지 안에 있는 서블릿 실행</li>
+</ul>
+</li>
+<li><code>web.xml</code>이 변경되면 서버는 반드시 재시작되어야 한다</li>
+<li>servlet 3.0 미만에서는 필수 파일이었으나 3.0 이상은 어노테이션으로 기재도 가능</li>
+</ul>
+<h5 id="lib"><a href="#lib" class="headerlink" title="lib"></a><code>lib</code></h5><ul>
+<li>각종 자료 파일들을 넣는다</li>
+</ul>
+<h5 id="classes"><a href="#classes" class="headerlink" title="classes"></a><code>classes</code></h5><ul>
+<li>실제 <code>class</code>들 (<code>java</code> 패키지 같은)</li>
+</ul>
 <blockquote>
-<p>여성은 공지한 필요 조건을 100% 충족해야 공개 채용직에 지원하는 반면, 남성은 필요 조건의 60%를 충족한다고 생각하면 지원한다.</p>
+<h4 id="파일-경로"><a href="#파일-경로" class="headerlink" title="파일 경로"></a>파일 경로</h4><p>워크스페이스 &gt; <code>.metadata</code> &gt; <code>.plugins</code> &gt; <code>org.eclipse.wst.server.core</code> &gt; <code>tmp0</code></p>
+<h5 id="tmp0"><a href="#tmp0" class="headerlink" title="tmp0"></a><code>tmp0</code></h5><ul>
+<li>이클립스가 톰캣을 사용하기 때문에</li>
+<li>톰캣의 디렉토리 구조와 거의 유사</li>
+</ul>
+<p><code>tmp0</code> &gt; <code>wtpwebapps</code> &gt; <code>프로젝트들</code></p>
+</blockquote>
+<h3 id="Servlet-작성-방법"><a href="#Servlet-작성-방법" class="headerlink" title="Servlet 작성 방법"></a>Servlet 작성 방법</h3><blockquote>
+<h3 id="server"><a href="#server" class="headerlink" title="server"></a>server</h3><ul>
+<li>클라이언트 요청 시 두 개의 객체가 자동으로 생성된다<ul>
+<li>요청을 받아내는 <code>request</code> 객체</li>
+<li>응답을 하는 <code>response</code> 객체</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h4 id="Servlet-3-0-이상"><a href="#Servlet-3-0-이상" class="headerlink" title="Servlet 3.0 이상"></a>Servlet 3.0 이상</h4><ul>
+<li>자바 어노테이션 사용<ul>
+<li><code>@WebServlet(&#39;/blahblah&#39;)</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="Servlet-3-0-미만"><a href="#Servlet-3-0-미만" class="headerlink" title="Servlet 3.0 미만"></a>Servlet 3.0 미만</h4><ul>
+<li><p><code>Servlet</code> 등록 시 <code>web.xml</code>에 등록</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">description</span>&gt;</span><span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">display-name</span>&gt;</span>TenServlet<span class="tag">&lt;/<span class="name">display-name</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>TenServlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>exam.TenServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>TenServlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/ttt<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Servlet-라이프-사이클"><a href="#Servlet-라이프-사이클" class="headerlink" title="Servlet 라이프 사이클"></a>Servlet 라이프 사이클</h3><h4 id="사용자가-만든-Servlet"><a href="#사용자가-만든-Servlet" class="headerlink" title="사용자가 만든 Servlet"></a>사용자가 만든 Servlet</h4><p><code>HttpServlet</code>의 3가지 메서드를 상속</p>
+<ul>
+<li><p><code>init()</code></p>
+</li>
+<li><p><code>service(request, response)</code></p>
+<ul>
+<li><p><code>HttpServlet</code>의 <code>service</code> 메서드는 템플릿 메서드 패턴으로 구현</p>
 <blockquote>
-<p>위의 문구는 우맨 후 코드 서울 리전 오픈 때 구글 엔지니어 분과, 이전 WTM 세션 때도 인용한 것이었다.</p>
+<p><strong>템플릿 메서드 패턴</strong></p>
+<ul>
+<li>어떤 작업을 처리하는 일부를 서브 클래스로 캡슐화해 전체 일을 수행하는 구조는 바꾸지 않으면서 특정 단계에서 수행하는 내용을 바꾸는 패턴<ul>
+<li>동일 기능을 상위 클래스에서 정의하며 확장/변화가 필요한 부분만 서브 클래스에서 구현</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>출처 : <a href="https://gmlwjd9405.github.io/2018/07/13/template-method-pattern.html" target="_blank" rel="noopener">[Design Pattern] 템플릿 메서드 패턴이란</a></p>
 </blockquote>
 </blockquote>
-<h4 id="구체적으로-무엇을-하는-게-좋은가"><a href="#구체적으로-무엇을-하는-게-좋은가" class="headerlink" title="구체적으로 무엇을 하는 게 좋은가?"></a>구체적으로 무엇을 하는 게 좋은가?</h4><ul>
-<li>네트워킹</li>
-<li>나를 좀 먹는 사람과 거리 두기</li>
-<li>질문을 많이 하기</li>
-<li>작은 성과 거두기</li>
-<li><strong>실패하기 </strong><ul>
-<li>실패를 해야 성공할 수 있다는 점을 기억하자</li>
-<li>실패 속에서 배운다</li>
-</ul>
-</li>
-</ul>
-<p>나는 잘할 수 있을까, 라는 질문이 들면 <strong>나는 계속 할 것이다</strong>라고 답변하자.</p>
-<h3 id="We-can-make-sheroes-with-gender-lens-investing"><a href="#We-can-make-sheroes-with-gender-lens-investing" class="headerlink" title="We can make sheroes with gender lens investing"></a>We can make sheroes with gender lens investing</h3><h4 id="젠더-불평등"><a href="#젠더-불평등" class="headerlink" title="젠더 불평등"></a>젠더 불평등</h4><h4 id="자본에서의-젠더-불평등"><a href="#자본에서의-젠더-불평등" class="headerlink" title="자본에서의 젠더 불평등"></a>자본에서의 젠더 불평등</h4><p>공부나 시험을 통해 직업을 얻는 직군의 여성 진출 비율이 높으나, 돈을 집행하는 직군은 거의 다 남성임에 주목</p>
-<h5 id="성별에-대한-고정관념"><a href="#성별에-대한-고정관념" class="headerlink" title="성별에 대한 고정관념"></a>성별에 대한 고정관념</h5><p>확증 편향의 문제, <strong>여성은 남성과 똑같이 해도 리더로 인식되지 않는다.</strong></p>
-<h5 id="고정관념이-편견과-차별로-이어짐"><a href="#고정관념이-편견과-차별로-이어짐" class="headerlink" title="고정관념이 편견과 차별로 이어짐"></a>고정관념이 편견과 차별로 이어짐</h5><ul>
-<li>우리 안에는 여성에 대한 편견이 있다</li>
-</ul>
-<h4 id="젠더-관점의-투자"><a href="#젠더-관점의-투자" class="headerlink" title="젠더 관점의 투자"></a>젠더 관점의 투자</h4><ul>
-<li><code>젠더</code> : 사회적인 성</li>
-<li><code>젠더 감수성이 뛰어나다</code> : 성별을 떠나 개인이 가진 고유성과 개별성을 존중한다는 것</li>
-</ul>
-<h5 id="여성들이-겪는-인지적-편견"><a href="#여성들이-겪는-인지적-편견" class="headerlink" title="여성들이 겪는 인지적 편견"></a>여성들이 겪는 인지적 편견</h5><ul>
-<li>기혼 여성은 사업에 집중할 수 없다</li>
-<li>여성은 남성보다 체력이 좋지 못하다</li>
-<li>여성은 기술 기반의 전문성이 없다</li>
-<li>여성은 리더십이 없다</li>
-<li>여성은 성과를 빠르게 내지 못한다</li>
-</ul>
-<p><strong>젠더편향적인 시스템의 인지하고 평등한 생태계를 만들어가겠다는 의도성이 필요</strong></p>
-<h4 id="Sheroes-in-Tech"><a href="#Sheroes-in-Tech" class="headerlink" title="Sheroes in Tech"></a>Sheroes in Tech</h4><h4 id="성평등을-코딩하라"><a href="#성평등을-코딩하라" class="headerlink" title="성평등을 코딩하라"></a>성평등을 코딩하라</h4><ul>
-<li>세계 최초의 프로그래머는 여성</li>
-<li>60년대는 <code>컴퓨터걸스</code>라는 말이 있을 정도로 여성이 테크 업계(STEM)에 많았다</li>
-<li>85년도부터 남녀 비율이 비슷</li>
-<li>이후 남성 비율이 증가</li>
-</ul>
-<p>자본은 <code>STEM</code> 분야에 흐르고 있다는 점 또한 주목해야할 요소다.</p>
-<h5 id="technology"><a href="#technology" class="headerlink" title="technology"></a>technology</h5><ul>
-<li>누구나 같은 정보와 서비스를 제공 받을 수 있다</li>
-<li>민주적이며 차별 없다</li>
-<li>플랫폼 자체는 중성적</li>
-<li>테크 분야가 발전할수록 여성들은 더 많은 혜택을 받을 것<ul>
-<li>but 안전성 고려 부분이 넓어진다</li>
-</ul>
-</li>
-</ul>
-<h4 id="Why-more-sheroes-in-tech-and-startups"><a href="#Why-more-sheroes-in-tech-and-startups" class="headerlink" title="Why more sheroes in tech and startups"></a>Why more sheroes in tech and startups</h4><ul>
-<li>젠더 렌즈는 시장을 확장하기 위한 전략</li>
-<li>생산자와 소비자 측면에서 여성이 함께 해야 한다</li>
-</ul>
-<h4 id="Why-more-sheroes-in-tech"><a href="#Why-more-sheroes-in-tech" class="headerlink" title="Why more sheroes in tech?"></a>Why more sheroes in tech?</h4><p>과학기술은 중립적 믿음과 달리 여전히 남성 편향이 확인되고 있다</p>
 <ul>
-<li>신약 개발 과정이 남성중심이라 출시 후 여성에게 더 많은 부작용 발생</li>
-<li>채용 인공지능에서 여성 지원자에게 불리한 점이 작용</li>
-<li>자율주행 차량의 더미가 남성 위주<ul>
-<li>임산부와 같은 사례가 없음</li>
+<li><code>doGet(request, response)</code></li>
+<li><code>doPost(request, response)</code></li>
 </ul>
 </li>
 </ul>
-<h3 id="Women-career-change-장학-프로그램-필요성의-대두"><a href="#Women-career-change-장학-프로그램-필요성의-대두" class="headerlink" title="Women career change 장학 프로그램 필요성의 대두"></a>Women career change 장학 프로그램 필요성의 대두</h3><h4 id="테크-업계에-여성들이-진출하지-못한다면"><a href="#테크-업계에-여성들이-진출하지-못한다면" class="headerlink" title="테크 업계에 여성들이 진출하지 못한다면"></a>테크 업계에 여성들이 진출하지 못한다면</h4><ul>
-<li>젠더에 대한 고정관념 고착화</li>
-<li>소수에 대한 잘못된 시선과 평가</li>
-<li>여성 커리어 롤모델의 부족</li>
-<li>제품/서비스를 이용하는 여성들의 목소리를 반영하지 못함</li>
-</ul>
-<h3 id="스타트업에서-개발자로-일하는-법"><a href="#스타트업에서-개발자로-일하는-법" class="headerlink" title="스타트업에서 개발자로 일하는 법"></a>스타트업에서 개발자로 일하는 법</h3><h4 id="스타트업"><a href="#스타트업" class="headerlink" title="스타트업"></a>스타트업</h4><ul>
-<li>다양한 업무를 해볼 수 있다는 장점</li>
-</ul>
-<h4 id="좋은-개발자-좋은-코더"><a href="#좋은-개발자-좋은-코더" class="headerlink" title="좋은 개발자 !== 좋은 코더"></a>좋은 개발자 !== 좋은 코더</h4><ul>
-<li><p>협업 능력이 뛰어나야 함</p>
 </li>
-<li><p>회사의 프로덕트를 자신의 것처럼 여기는 자세</p>
+<li><p><code>destroy()</code></p>
+</li>
+</ul>
+<p><img src="https://cphinf.pstatic.net/mooc/20180124_22/1516782982944xjogH_PNG/1_5_3_ServletLifcycle.PNG" alt=""></p>
 <ul>
-<li>회사에서 요구하는 프로덕트만 만들지 않고, 문제점을 개선하려는 노력</li>
+<li><p><code>WAS</code>는 서블릿 요청을 받으면 해당 서블릿이 메모리에 있는지 확인</p>
+<ul>
+<li>메모리에 없다면<ul>
+<li>해당 서블릿 클래스를 메모리에 올림<ul>
+<li>객체가 생성되는 작업</li>
 </ul>
 </li>
-<li>가독성 높은 코드를 짜려고 노력</li>
+<li><code>init()</code> 실행</li>
 </ul>
-<h4 id="남들과-다른-배경을-가졌다는-것"><a href="#남들과-다른-배경을-가졌다는-것" class="headerlink" title="남들과 다른 배경을 가졌다는 것"></a>남들과 다른 배경을 가졌다는 것</h4><h4 id="걱정거리"><a href="#걱정거리" class="headerlink" title="걱정거리"></a>걱정거리</h4><ul>
-<li>문과 출신</li>
-<li>많은 나이</li>
-<li>여성 엔지니어가 별로 없다는 것</li>
+</li>
+<li>메모리에 있다면<ul>
+<li><code>service()</code> 실행<ul>
+<li>응답해야하는 모든 내용은 해당 메서드에 구현해야 함</li>
 </ul>
-<h5 id="걱정에-대한-답"><a href="#걱정에-대한-답" class="headerlink" title="걱정에 대한 답"></a>걱정에 대한 답</h5><p>배경적인 요인 때문에 어려운 게 아니다. 커뮤니케이션 능력을 키우고, 스스로 공부하는 개발자들이 많다는 걸 기억하자.</p>
-<h3 id="너무-늦지-않게-커리어-전환을-준비하기"><a href="#너무-늦지-않게-커리어-전환을-준비하기" class="headerlink" title="너무 늦지 않게 커리어 전환을 준비하기"></a>너무 늦지 않게 커리어 전환을 준비하기</h3><h4 id="너무-늦지-않은-걸까"><a href="#너무-늦지-않은-걸까" class="headerlink" title="너무 늦지 않은 걸까?"></a>너무 늦지 않은 걸까?</h4><p>대단한 사람들의 이야기를 들을 수록 커리어 전환이 두려웠다. 많진 않아도 지금 연봉으로 먹고 살 수는 있는데, 라는 고민을 했다. <strong>그럼에도 불구하고, 개발자가 되고 싶었다.</strong> 개발의 특정 요소가 재미있었고, 테스트 해본 결과 나도 할 수 있겠다는 생각이 들었다. 비전공자만의 강점이 있다고 생각한다. <strong>신입에게 너무 많은 실력을 기대하지 않는다.</strong> 배우려는 의지가 중요하다고 생각한다. </p>
-<h2 id="느낀점"><a href="#느낀점" class="headerlink" title="느낀점"></a>느낀점</h2><p>WTM의 연사님이 해당 행사의 연사로 참여하신다는 소식을 접해서, <code>Women career change</code> 프로그램에는 그다지 관심이 없는 상태에서 참여했지만 유익한 시간이었다. <del>아직 발표 자료를 공유받지 못해서, 공유를 받게 된다면 발표 슬라이드 또한 포스팅에 함께 첨부할 예정</del> 파트2에서 비전공이었다가 외부 프로그램을 통해 개발자로 커리어를 전환하신 분들의 이야기를 듣게 되었는데, 기대치 않았지만 뜻 깊었다. 연사 님들 대부분이 지녔던 걱정거리가 현재의 내가, 그리고 앞으로의 내가 계속 가지고 나가야 할 것들이라는 생각이 들었기 때문이다.</p>
-<p>불안할 수록 공부해야지. 노윤미 연사 님의 말처럼, <strong>나는 계속 개발을 할 것이다</strong>.</p>
+</li>
+</ul>
+</li>
+<li><code>WAS</code>가 종료되거나 웹 어플리케이션 갱신의 경우 <code>destroy()</code> 메서드 실행</li>
+</ul>
+</li>
+<li><p>서블릿은 서버에 <strong>서블릿 객체를 여러 개 만들지 않는다</strong></p>
+</li>
+</ul>
+<h2 id="Request-Response-객체의-이해"><a href="#Request-Response-객체의-이해" class="headerlink" title="Request, Response 객체의 이해"></a><code>Request</code>, <code>Response</code> 객체의 이해</h2><p><img src="https://cphinf.pstatic.net/mooc/20180124_79/15167843899250uB2H_PNG/1_5_4_request_response.PNG" alt=""></p>
+<h3 id="클라이언트와-서버의-통신"><a href="#클라이언트와-서버의-통신" class="headerlink" title="클라이언트와 서버의 통신"></a>클라이언트와 서버의 통신</h3><ul>
+<li>브라우저는 도메인과 포트 번호를 이용해 서버에 접속<ul>
+<li><code>path</code> 정보</li>
+<li>클라이언트 <code>ip</code> 등의 클라이언트 정보</li>
+</ul>
+</li>
+<li><p>클라이언트 정보를 서버에 전송</p>
+</li>
+<li><p><code>WAS</code>는 웹 브라우저로부터 <code>Servlet</code> 요청을 받으면</p>
+<ul>
+<li>요청할 때 가지고 온 정보를 <code>HttpServletRequest</code>객체를 생성하여 저장</li>
+<li>응답을 보낼 때 사용하기 위해 <code>HttpServletSponse</code>객체를 서블릿에게 전달</li>
+<li>생성된 두 객체를 서블릿에게 전달<ul>
+<li><code>service()</code>, <code>doGet()</code>, <code>doPost()</code> 메서드의 파라미터로 전달되어 사용됨</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="HttpServletRequest"><a href="#HttpServletRequest" class="headerlink" title="HttpServletRequest"></a>HttpServletRequest</h3><ul>
+<li><code>http 프로토콜</code>의 <code>request</code> 정보를 서블릿에게 전달하기 위한 목적으로 사용</li>
+<li><code>헤더 정보</code>, <code>파라미터</code>, <code>쿠키</code>, <code>URI</code>, <code>URL</code> 등의 정보를 읽어 들이는 메소드가 있다<ul>
+<li><code>getHeaderNames()</code><ul>
+<li>반환받을 때 <code>Enumeration&lt;String&gt;</code>으로 반환</li>
+<li>여러 개의 요소를 가지고 있어 이터레이터로 요소를 가지고 있는지를 검사</li>
+<li>첫 번째 요소는 <code>headername</code> 이다</li>
+</ul>
+</li>
+<li><code>getHeader(headername)</code><ul>
+<li><code>headerValue</code>를 반환</li>
+</ul>
+</li>
+<li><code>getParameter(&quot;name&quot;)</code><ul>
+<li>해당 파라미터의 value를 반환</li>
+<li>모든 value는 <strong>문자열로 반환</strong></li>
+</ul>
+</li>
+<li><code>getRequestURI()</code><ul>
+<li>도메인과 포트 이하에 있는 값을 리턴</li>
+</ul>
+</li>
+<li><code>getRemoteAddr()</code><ul>
+<li>요청한 클라이언트의 주소 등이 반환</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>URI</strong>(Uniform Resource Identifier)</p>
+<ul>
+<li>정보 리소스를 고유하게 식별하고 위치를 지정</li>
+<li><code>url</code> 과 <code>urn</code> 등의 하위 개념을 포함</li>
+<li><p><code>WAS</code> 등을 처리하는 자원 식별자</p>
+</li>
+<li><p><code>rewrite</code> 기술을 이용하여 만든 의미있는 식별자</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>rewrite</strong> 기술</p>
+<p>요청을 통해서 주어진 URL의 규칙을 변경해서 웹서비스를 보다 유연하게 만드는 방법</p>
+<ul>
+<li>의미론적 url로의 변경</li>
+<li>확장자의 치환</li>
+<li>리다이렉션</li>
+<li>내부 리다이렉션</li>
+</ul>
+<blockquote>
+<p>출처 : <a href="https://www.opentutorials.org/module/384/4337" target="_blank" rel="noopener">재작성(rewrite)</a></p>
+</blockquote>
+</blockquote>
+<ul>
+<li>rest 서비스</li>
+<li>웹 기반의 구조 문법</li>
+</ul>
+<p><strong>URL</strong>(Uniform Resource Locator)</p>
+<ul>
+<li>특정 서버의 한 리소스에 대한 구체적인 위치를 서술</li>
+</ul>
+<p><strong>URN</strong>(Uniform Resource Name)</p>
+<ul>
+<li>콘텐츠를 이루는 한 리소스에 대해, 그 리소스의 위치에 영향 받지 않는 유일무이한 이름 역할</li>
+<li>리소스를 여기저기로 옮기더라도 문제없이 동작</li>
+<li>URL의 한계로 인해 착수</li>
+</ul>
+<blockquote>
+<p>출처</p>
+<ul>
+<li><a href="https://jjunii486.tistory.com/28" target="_blank" rel="noopener">URL과 URI는 무슨 차이일까?</a></li>
+<li><a href="https://mygumi.tistory.com/139" target="_blank" rel="noopener">URI vs URL vs URN</a></li>
+</ul>
+</blockquote>
+</blockquote>
+<ul>
+<li><p><code>Body</code>의 <code>Stream</code>을 읽어 들이는 메소드를 가지고 있다</p>
+<ul>
+<li><p><code>Stream</code></p>
+<ul>
+<li>클라이언트와 서버 사이 맺어진 연결을 통해 양방향으로 주고받는 하나 이상의 <code>Message</code><ul>
+<li><code>Message</code><ul>
+<li>요청 / 응답의 단위로 다수의 <code>Frame</code>으로 이루어짐<ul>
+<li><code>Frame</code><ul>
+<li><code>http/2</code> 통신 상 제일 작은 정보의 단위</li>
+<li><code>Header</code> 혹은 <code>Data</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://t2.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/JqQ/image/z4szqsmS7gz_g3MS0LK49ZGh8JU.png" alt=""></p>
+<blockquote>
+<p>출처 : <a href="https://brunch.co.kr/@sangjinkang/3" target="_blank" rel="noopener">HTTP/2에서 Frame, Stream의 의미</a></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="HttpServletResponse-1"><a href="#HttpServletResponse-1" class="headerlink" title="HttpServletResponse"></a>HttpServletResponse</h3><ul>
+<li>클라이언트에게 응답을 보내기 위한 <code>HttpServleResponse</code> 객체를 생성하여 서블릿에게 전달</li>
+<li>서블릿은 <code>HttpServleResponse</code> 객체를 이용하여 <code>content type</code>, <code>응답코드</code>, <code>응답 메시지</code> 등을 전송</li>
+</ul>
 
       
     </div>
     <footer class="entry-meta entry-footer">
       
 	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/일상/">일상</a>
+    <a class="article-category-link" href="/categories/개발공부/">개발공부</a>, <a class="article-category-link" href="/categories/개발공부/부스트코스/">부스트코스</a>, <a class="article-category-link" href="/categories/개발공부/부스트코스/웹-프로그래밍/">웹 프로그래밍</a>
 
       
       
@@ -258,7 +436,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/26/">Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><span class="page-number current">27</span><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><span class="space">&hellip;</span><a class="page-number" href="/page/130/">130</a><a class="extend next" rel="next" href="/page/28/">Next</a>
+    <a class="extend prev" rel="prev" href="/page/26/">Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><span class="page-number current">27</span><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><span class="space">&hellip;</span><a class="page-number" href="/page/133/">133</a><a class="extend next" rel="next" href="/page/28/">Next</a>
   </nav>
 
 </section>
@@ -311,7 +489,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/">개발공부</a><span class="category-list-count">100</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/GraphQL/">GraphQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/React/">React</a><span class="category-list-count">25</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/javascript/">javascript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/nodeJS/">nodeJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/뉴딜과정/">뉴딜과정</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/몽고DB/">몽고DB</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/부스트코스/">부스트코스</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/부스트코스/웹-프로그래밍/">웹 프로그래밍</a><span class="category-list-count">10</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/안드로이드/">안드로이드</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/알고리즘-난항일지/">알고리즘 난항일지</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/우아한테크러닝-React-Typescript/">우아한테크러닝(React+Typescript)</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/정보처리기사/">정보처리기사</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/일상/">일상</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/책/">책</a><span class="category-list-count">7</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/">개발공부</a><span class="category-list-count">103</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/GraphQL/">GraphQL</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/React/">React</a><span class="category-list-count">25</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/Vue/">Vue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/javascript/">javascript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/nodeJS/">nodeJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/뉴딜과정/">뉴딜과정</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/몽고DB/">몽고DB</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/부스트코스/">부스트코스</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/부스트코스/웹-프로그래밍/">웹 프로그래밍</a><span class="category-list-count">10</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/안드로이드/">안드로이드</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/알고리즘-난항일지/">알고리즘 난항일지</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/우아한테크러닝-React-Typescript/">우아한테크러닝(React+Typescript)</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/정보처리기사/">정보처리기사</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/일상/">일상</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/책/">책</a><span class="category-list-count">7</span></li></ul>
     </div>
   </div>
 
@@ -359,6 +537,42 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2020/01/24/graphQL_study01/">ABCD의 GraphQL 첫 날 01</a></h6>
+              <span>1월 24, 2020</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2020/01/24/graphQL_study02/">ABCD의 GraphQL 첫 날 02</a></h6>
+              <span>1월 24, 2020</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2020/01/20/vue-intro/">Age of Vue.js</a></h6>
+              <span>1월 20, 2020</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2020/01/01/new-programmers-manual01/">신입 개발자 생존의 기술 - 전문적인 프로그래밍</a></h6>
               <span>1월 1, 2020</span>
             </div>
@@ -389,42 +603,6 @@
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/12/30/functional-thinking05/">함수형 사고, 진화하라</a></h6>
-              <span>12월 30, 2019</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/11/24/nhn2019/">NHN FORWARD</a></h6>
-              <span>11월 24, 2019</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/09/08/frontend-meetup/">FRONT END MEETUP</a></h6>
-              <span>9월 8, 2019</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -435,7 +613,7 @@
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">1월 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">12월 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">11월 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">9월 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">8월 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">7월 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">6월 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">5월 2019</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">4월 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">3월 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">2월 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">1월 2019</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">12월 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">11월 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">10월 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">9월 2018</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">1월 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">12월 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">11월 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">9월 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">8월 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">7월 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">6월 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">5월 2019</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">4월 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">3월 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">2월 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">1월 2019</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">12월 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">11월 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">10월 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">9월 2018</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
