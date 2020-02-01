@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>CSS 마스터 클래스 01 | ERecord</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta name="description" content="CSS 마스터 클래스 01 해당 게시글은 노마드코더의 CSS 마스터 클래스 강의를 듣고 요약한 것입니다. 저작권 문제가 발생할 시 삭제될 수 있습니다.  Flexboxflex-containerdisplay 속성이 flex이며, 자식 요소인 flex-item의 제어권을 지닌다. 자손 요소까지 영향을 끼치지 못한다 123body &amp;#123;	display :">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS 마스터 클래스 01">
+<meta property="og:url" content="http://eunajjing.github.io/2020/02/01/css_master01/index.html">
+<meta property="og:site_name" content="ERecord">
+<meta property="og:description" content="CSS 마스터 클래스 01 해당 게시글은 노마드코더의 CSS 마스터 클래스 강의를 듣고 요약한 것입니다. 저작권 문제가 발생할 시 삭제될 수 있습니다.  Flexboxflex-containerdisplay 속성이 flex이며, 자식 요소인 flex-item의 제어권을 지닌다. 자손 요소까지 영향을 끼치지 못한다 123body &amp;#123;	display :">
+<meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2020-02-01T08:02:10.038Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS 마스터 클래스 01">
+<meta name="twitter:description" content="CSS 마스터 클래스 01 해당 게시글은 노마드코더의 CSS 마스터 클래스 강의를 듣고 요약한 것입니다. 저작권 문제가 발생할 시 삭제될 수 있습니다.  Flexboxflex-containerdisplay 속성이 flex이며, 자식 요소인 flex-item의 제어권을 지닌다. 자손 요소까지 영향을 끼치지 못한다 123body &amp;#123;	display :">
+  
+    <link rel="alternate" href="/atom.xml" title="ERecord" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/fashion.css">
+  <link rel="stylesheet" href="/css/glyphs.css">
+
+</head>
+</html>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="ERecord" rel="home"> ERecord </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">일상 및 개발 공부 기록용 블로그</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="https://www.notion.so/eunako-attr-every_day-study_hard-ebb1a09d24734280aba94018d13df0a1">About</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="https://www.notion.so/bookmarks-3b11361b4a07466f9fa0236e5f762c87">bookmark</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-css_master01" style="width: 66%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      CSS 마스터 클래스 01
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/02/01/css_master01/" class="article-date">
+	  <time datetime="2020-02-01T08:00:25.000Z" itemprop="datePublished">2월 1, 2020</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/개발공부/">개발공부</a>, <a class="article-category-link" href="/categories/개발공부/CSS/">CSS</a>
+ 
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="CSS-마스터-클래스-01"><a href="#CSS-마스터-클래스-01" class="headerlink" title="CSS 마스터 클래스 01"></a>CSS 마스터 클래스 01</h1><blockquote>
+<p>해당 게시글은 노마드코더의 <a href="https://academy.nomadcoders.co/courses/enrolled/360503" target="_blank" rel="noopener">CSS 마스터 클래스</a> 강의를 듣고 요약한 것입니다. 저작권 문제가 발생할 시 삭제될 수 있습니다.</p>
+</blockquote>
+<h2 id="Flexbox"><a href="#Flexbox" class="headerlink" title="Flexbox"></a><code>Flexbox</code></h2><h3 id="flex-container"><a href="#flex-container" class="headerlink" title="flex-container"></a><code>flex-container</code></h3><p><code>display</code> 속성이 <code>flex</code>이며, 자식 요소인 <code>flex-item</code>의 제어권을 지닌다. <strong>자손 요소까지 영향을 끼치지 못한다</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">	<span class="attribute">display </span>: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="justify-content-수평"><a href="#justify-content-수평" class="headerlink" title="justify-content : 수평"></a><code>justify-content</code> : 수평</h4><p>사용하려면 충분한 <code>width</code>를 가지고 있어야 한다</p>
+<ul>
+<li><p><code>space-between</code></p>
+<ul>
+<li><code>flex-items</code>을 같은 간격으로 떨어트린다</li>
+<li>기본적으로 반응형 디자인을 지닌다</li>
+</ul>
+</li>
+<li><p><code>flex-start</code></p>
+<ul>
+<li>디폴트 값. 좌측부터 <code>flex-items</code>이 시작</li>
+</ul>
+</li>
+<li><code>flex-end</code><ul>
+<li>우측부터 <code>flex-items</code>이 붙는다</li>
+</ul>
+</li>
+<li><code>space-around</code><ul>
+<li><code>flex-items</code> 주변에 간격을 만든다</li>
+<li><code>marginLeft</code>와 <code>marginRight</code>가 있는 것과 비슷</li>
+</ul>
+</li>
+</ul>
+<h4 id="align-items-수직"><a href="#align-items-수직" class="headerlink" title="align-items : 수직"></a><code>align-items</code> : 수직</h4><p>사용하려면 충분한 <code>height</code>를 가지고 있어야 한다</p>
+<ul>
+<li><code>center</code></li>
+<li><code>flex-start</code></li>
+<li><code>flex-end</code></li>
+</ul>
+<h4 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a><code>flex-direction</code></h4><p>기본적으로 <code>row</code> 값을 지니고 있으며, 만약 <code>column</code>으로 값을 변경하게 되면 기준 축이 바뀌며 수직 축과 수평 축이 서로 변경</p>
+<h3 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap"></a><code>flex-wrap</code></h3><p>안에 있는 <code>flex-items</code>가 서로 겹칠 때 사용한다. 기본적으로 <code>flex-items</code>는 공간이 부족하면 <code>item</code>을 찌그러트리는 성질을 지니고 있다. </p>
+<h4 id="no-wrap"><a href="#no-wrap" class="headerlink" title="no-wrap"></a><code>no-wrap</code></h4><p><code>flex-wrap</code>의 기본 값으로 공간이 부족하면 아이템을 찌그러트린다</p>
+<h4 id="wrap"><a href="#wrap" class="headerlink" title="wrap"></a><code>wrap</code></h4><p>아이템이 일그러지는 것을 막는다</p>
+<h3 id="flex-direction-1"><a href="#flex-direction-1" class="headerlink" title="flex-direction"></a><code>flex-direction</code></h3><h4 id="row-reverse"><a href="#row-reverse" class="headerlink" title="row reverse"></a><code>row reverse</code></h4><p><code>flex-items</code>의 순서를 바꾼다. 이 때 <code>start</code>의 값은 우측이 되며, <code>end</code>의 값은 좌측이 된다.</p>
+<h4 id="column-reverse"><a href="#column-reverse" class="headerlink" title="column-reverse"></a><code>column-reverse</code></h4><p><code>flex-items</code>의 순서를 바꾼다. 이 때 <code>top</code>의 값은 하단이 되며, <code>bottom</code>의 값은 상단이 된다.</p>
+<h3 id="align-self"><a href="#align-self" class="headerlink" title="align-self"></a><code>align-self</code></h3><p><code>display</code>에 <code>flex</code>를 지닌 엘리먼트에 주는 속성이 아니라, 직접 <code>items</code>에 옵션을 주는 특이한 속성</p>
+<h2 id="CSS-Grid"><a href="#CSS-Grid" class="headerlink" title="CSS Grid"></a>CSS Grid</h2><h3 id="display-grid"><a href="#display-grid" class="headerlink" title="display : grid"></a><code>display : grid</code></h3><ul>
+<li><p><code>grid-template-columns</code></p>
+</li>
+<li><p><code>grid-template-rows</code></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns </span>: <span class="number">30px</span> <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">grid-template-rows </span>: <span class="number">30px</span> <span class="number">12px</span>;</span><br><span class="line">  <span class="comment">/** 30px 정사각형 하나와 가로 50px, 세로 12px의 직사각형이 만들어진다 **/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p><code>grid-gap</code> : <code>.box</code>의 사이를 띄운다</p>
+</li>
+<li><p><code>gride-template-areas</code></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.beforeDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">grid-auto-rows </span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="comment">/* 한 줄에 세로 길이가 어느 정도를 차지할 것인지</span></span><br><span class="line"><span class="comment">  	원한다면 각각의 class에 크기를 넣어도 무방*/</span></span><br><span class="line">  <span class="attribute">grid-template-areas</span>:</span><br><span class="line">    <span class="string">"header header header"</span></span><br><span class="line">    <span class="string">"content content sidebar"</span></span><br><span class="line">    <span class="string">"content content sidebar"</span></span><br><span class="line">    <span class="string">"footer footer footer"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.aaa</span> &#123;</span><br><span class="line">  <span class="attribute">grid-area </span>: header</span><br><span class="line">  <span class="comment">/* 위의 grid-template-areas에서 지정한 이름을 써줘야 함 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="grid-area"><a href="#grid-area" class="headerlink" title="grid-area"></a><code>grid-area</code></h4><p>인자로 <code>grid-template-areas</code>의 이름을 받거나, <code>row start line</code>, <code>column start line</code>, <code>row end line</code>, <code>column end line</code>를 정해줄 수 있다. <code>line</code>은 좌측 상단부터, <code>1</code>부터 시작한다.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">grid-area </span>: span <span class="number">4</span> / span <span class="number">4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>위와 같은 경우, 좌측을 <code>row</code>로, 우측을 <code>column</code>으로 인식한다.</p>
+<h4 id="fr"><a href="#fr" class="headerlink" title="fr"></a><code>fr</code></h4><p>최대한 공간을 차지하라는 의미의 <strong>단위</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">	<span class="attribute">grid-template-columns </span>: <span class="number">2</span>fr <span class="number">1</span>fr <span class="number">2</span>fr <span class="number">1</span>fr</span><br><span class="line">  <span class="comment">/* 한 줄로 정렬된 div 박스 4개가 나오며,</span></span><br><span class="line"><span class="comment">    첫 div는 두 번째 div보다 두 배가 큰 모양새</span></span><br><span class="line"><span class="comment">    총 6개로 나뉜 그리드 내에 위치한 div들을 생각*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="repeat"><a href="#repeat" class="headerlink" title="repeat"></a><code>repeat</code></h4><p><code>column</code>을 반복하는 <code>CSS</code> 함수</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns </span>: <span class="built_in">repeat</span>(5, 1fr) <span class="number">4</span>fr;</span><br><span class="line">  <span class="comment">/* 5번 반복의 1fr를 만들고 이후 4fr의 것을 붙이겠다 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="minmax"><a href="#minmax" class="headerlink" title="minmax"></a><code>minmax</code></h4><p><code>object</code>가 가져야 하는 최소, 최대 크기를 지정할 수 있는 함수. 즉 <strong>반응형 시에도 줄어들지 않는다</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">	<span class="attribute">grid-template-columns </span>: <span class="built_in">minmax</span>(400px, 2fr) ...</span><br><span class="line">  <span class="comment">/* 최소 크기는 400px이며, 최대 2fr까지 늘어난다 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="max-content"><a href="#max-content" class="headerlink" title="max-content"></a><code>max-content</code></h4><p>가질 수 있는 최대한의 크기를 가지게 하는 속성</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">	<span class="attribute">grid-template-columns </span>: max-content</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="min-content"><a href="#min-content" class="headerlink" title="min-content"></a><code>min-content</code></h4><p>가질 수 있는 가장 최소한의 크기를 가지게 하는 속성</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">	<span class="attribute">grid-template-columns </span>: min-content	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="auto-fit"><a href="#auto-fit" class="headerlink" title="auto-fit"></a><code>auto-fit</code></h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns </span>: <span class="built_in">repeat</span>(auto-fit, 50px)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>가질 수 있는 가장 많은 <code>column</code>을 가지되, 각 <code>column</code>의 크기는 <code>50px</code>로 한다.</p>
+<blockquote>
+<p>프론트 단에서 얼마나 많은 수의 <code>div</code>가 만들어져야 하는지 모르는 경우 유용하게 사용할 수 있으며,</p>
+<blockquote>
+<p>DB에서 불러오는 경우 등</p>
+</blockquote>
+<p>보통 <code>minmax</code>와 함께 쓰며 유연성을 보완한다</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">&gt;   display : grid;</span><br><span class="line">&gt;   <span class="selector-tag">grid-template-columns</span> : <span class="selector-tag">repeat</span>(<span class="selector-tag">auto-fit</span>, <span class="selector-tag">minmax</span>(350<span class="selector-tag">px</span>, 1<span class="selector-tag">fx</span>))</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="auto-fill"><a href="#auto-fill" class="headerlink" title="auto-fill"></a><code>auto-fill</code></h4><p>기존에 있는 <code>layout</code>을 <code>cell</code>로 채워나가며, <code>cell</code>이 없는 경우 <code>ghost grid</code>로 채워짐</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns </span>: <span class="built_in">repeat</span>(auto-fill, minmax(350px, 1fx))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="grid-auto-flow"><a href="#grid-auto-flow" class="headerlink" title="grid-auto-flow"></a><code>grid-auto-flow</code></h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">	<span class="attribute">grid-auto-flow </span>: row dense;</span><br><span class="line">  <span class="comment">/* 한 줄에 비어있는 것이 없도록 가득 채운다,</span></span><br><span class="line"><span class="comment">  즉 ghost item이 존재하지 않는다</span></span><br><span class="line"><span class="comment">  또 다른 값으로는 row 대신 column을 넣을 수도 있다 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="content와-item의-차이"><a href="#content와-item의-차이" class="headerlink" title="content와 item의 차이"></a><code>content</code>와 <code>item</code>의 차이</h2><h3 id="content"><a href="#content" class="headerlink" title="content"></a><code>content</code></h3><p>만들어놓은 그리드 자체를 옮긴다.</p>
+<h4 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a><code>justify-content</code></h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">justify-content </span>: center;</span><br><span class="line">  <span class="comment">/* 여러 개의 자식 요소들이 상단 중앙으로 정렬된다</span></span><br><span class="line"><span class="comment">  값으로는 start, end가 있으며 이는 flex와 유사하게 보인다 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a><code>align-content</code></h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">align-content </span>: center;</span><br><span class="line">  <span class="comment">/* 여러 개의 자식 요소들이 세로 축을 기준으로 중앙으로 정렬된다</span></span><br><span class="line"><span class="comment">  값으로는 start, end가 있으며 이는 flex와 유사하게 보인다 */</span></span><br><span class="line">  <span class="attribute">height </span>: <span class="number">100vh</span>;</span><br><span class="line">  <span class="comment">/* height 값이 필요 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="place-content"><a href="#place-content" class="headerlink" title="place-content"></a><code>place-content</code></h4><p>인자로 두 개를 받으며, 첫 인자는 <code>align-content</code>, 두 번째 인자로 <code>justify-content</code>를 받는다.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">place-content </span>: center center</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="item"><a href="#item" class="headerlink" title="item"></a><code>item</code></h3><p><code>items</code>을 움직이게 한다. 만약 <code>justify</code>나 <code>align</code>을 하지 않았을 때 <code>default</code> 값은 <code>item</code> 확장 상태</p>
+<h4 id="justify-items"><a href="#justify-items" class="headerlink" title="justify-items"></a><code>justify-items</code></h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">	<span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">grid-auto-rows </span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">grid-template-colums </span>: <span class="built_in">repeat</span>(5, 100px);</span><br><span class="line">  <span class="comment">/* 100px 정사각형 box를 만들고 */</span></span><br><span class="line">  <span class="attribute">justify-items </span>: center;</span><br><span class="line">  <span class="comment">/* box 안, column 안에서 가로 축을 기준으로 center 정렬</span></span><br><span class="line"><span class="comment">  값으로는 start, end도 있다*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="align-item"><a href="#align-item" class="headerlink" title="align-item"></a><code>align-item</code></h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">	<span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">grid-auto-rows </span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">grid-template-colums </span>: <span class="built_in">repeat</span>(5, 100px);</span><br><span class="line">  <span class="comment">/* 100px 정사각형 box를 만들고 */</span></span><br><span class="line">  <span class="attribute">align-item </span>: center;</span><br><span class="line">  <span class="comment">/* box 안, column 안에서 세로 축을 기준으로 center 정렬</span></span><br><span class="line"><span class="comment">  값으로는 start, end도 있다*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="place-item"><a href="#place-item" class="headerlink" title="place-item"></a><code>place-item</code></h4><p>인자로 두 개를 받으며, 첫 인자는 <code>align-item</code>, 두 번째 인자로 <code>justify-item</code>를 받는다.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">	<span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">grid-auto-rows </span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">grid-template-colums </span>: <span class="built_in">repeat</span>(5, 100px);</span><br><span class="line">  <span class="attribute">place-item </span>: center center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="justify-self-align-self-place-self"><a href="#justify-self-align-self-place-self" class="headerlink" title="justify-self, align-self, place-self"></a><code>justify-self</code>, <code>align-self</code>, <code>place-self</code></h4><p>해당 요소에만 정렬 적용</p>
+<h2 id="flexbox와-css-grid-합치기"><a href="#flexbox와-css-grid-합치기" class="headerlink" title="flexbox와 css grid 합치기"></a><code>flexbox</code>와 <code>css grid</code> 합치기</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">grid-gap</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">grid-auto-rows</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">grid-template-columns</span>: <span class="built_in">repeat</span>(5, 1fr);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">place-item </span>: center center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 부모 요소의 자식들은 그리드를 따르며, 안에 있는 자식 요소는 flex 속성을 지닌다.</span></span><br><span class="line"><span class="comment">	정렬은 중앙 정렬로 한다 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="grid-column-grid-row"><a href="#grid-column-grid-row" class="headerlink" title="grid-column, grid-row"></a><code>grid-column</code>, <code>grid-row</code></h3><p>부모 요소 <code>Div</code>에 작성하지 않고, 자식 요소  <code>Div</code>에 작성</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:first-child</span> &#123;</span><br><span class="line">  <span class="attribute">grid-column-start</span>: <span class="number">1</span>;</span><br><span class="line">  <span class="attribute">grid-column-end</span>: <span class="number">5</span>;</span><br><span class="line">  <span class="comment">/* 1번째 line부터 시작해서 5번째 line까지</span></span><br><span class="line"><span class="comment">  칼럼으로 친다면 첫 칼럼부터 4 칼럼(5-1)까지 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 이렇게도 쓸 수 있다 */</span></span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:first-child</span> &#123;</span><br><span class="line">  <span class="attribute">grid-column </span>: <span class="number">1</span> / <span class="number">5</span>;</span><br><span class="line">  <span class="comment">/* 매한가지로 grid-row도 적용이 가능하다 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>-1</strong></p>
+<p>자동적으로 제일 마지막 <code>line</code>을 택할 때 쓴다. 마지막 <code>line</code>이 몇 번째인지 모를 때 사용</p>
+<h4 id="span"><a href="#span" class="headerlink" title="span"></a><code>span</code></h4><p><code>x</code>번 째부터 <code>y</code>번 째를 정해줄 필요 없이 단순히 그 칼럼이 가져야 하는 수를 지정할 때 사용</p>
+</blockquote>
+<h3 id="line-Naming"><a href="#line-Naming" class="headerlink" title="line Naming"></a><code>line Naming</code></h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">	<span class="attribute">grid-template-columns</span>:</span><br><span class="line">    [first-line] <span class="number">1</span>fr</span><br><span class="line">    [second-line] <span class="number">1</span>fr</span><br><span class="line">    [third-line] <span class="number">1</span>fr</span><br><span class="line">    [fourth-line] <span class="number">1</span>fr</span><br><span class="line">    [fifth-line] <span class="number">1</span>fr</span><br><span class="line">    [sixth-line];</span><br><span class="line">  <span class="comment">/* 이름은 반드시 `-`로 이어져 있어야 하고, 배열 형태여야 한다. */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:first-child</span> &#123;</span><br><span class="line">  <span class="attribute">grid-column-start </span>: second-line;</span><br><span class="line">  <span class="attribute">grid-column-end </span>: fourth-line;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="어떨-때-쓰나"><a href="#어떨-때-쓰나" class="headerlink" title="어떨 때 쓰나"></a>어떨 때 쓰나</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">grid-auto-rows </span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">grid-template-columns </span>: [first-line] <span class="built_in">repeat</span>(5, 1fr) [last-line]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:first-child</span> &#123;</span><br><span class="line">  <span class="attribute">grid-column-start </span>: first-line;</span><br><span class="line">  <span class="attribute">grid-column-end </span>: last-line;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/개발공부/">개발공부</a>, <a class="article-category-link" href="/categories/개발공부/CSS/">CSS</a>
+
+      
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/02/01/css_master02/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          CSS 마스터 클래스 02
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/24/graphQL_study01/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ABCD의 GraphQL 첫 날 01</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-마스터-클래스-01"><span class="nav-number">1.</span> <span class="nav-text">CSS 마스터 클래스 01</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Flexbox"><span class="nav-number">1.1.</span> <span class="nav-text">Flexbox</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-container"><span class="nav-number">1.1.1.</span> <span class="nav-text">flex-container</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#justify-content-수평"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">justify-content : 수평</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#align-items-수직"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">align-items : 수직</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#flex-direction"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">flex-direction</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-wrap"><span class="nav-number">1.1.2.</span> <span class="nav-text">flex-wrap</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#no-wrap"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">no-wrap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#wrap"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">wrap</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-direction-1"><span class="nav-number">1.1.3.</span> <span class="nav-text">flex-direction</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#row-reverse"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">row reverse</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#column-reverse"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">column-reverse</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#align-self"><span class="nav-number">1.1.4.</span> <span class="nav-text">align-self</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-Grid"><span class="nav-number">1.2.</span> <span class="nav-text">CSS Grid</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#display-grid"><span class="nav-number">1.2.1.</span> <span class="nav-text">display : grid</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#grid-area"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">grid-area</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fr"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">fr</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#repeat"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">repeat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#minmax"><span class="nav-number">1.2.1.4.</span> <span class="nav-text">minmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#max-content"><span class="nav-number">1.2.1.5.</span> <span class="nav-text">max-content</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#min-content"><span class="nav-number">1.2.1.6.</span> <span class="nav-text">min-content</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#auto-fit"><span class="nav-number">1.2.1.7.</span> <span class="nav-text">auto-fit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#auto-fill"><span class="nav-number">1.2.1.8.</span> <span class="nav-text">auto-fill</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grid-auto-flow"><span class="nav-number">1.2.1.9.</span> <span class="nav-text">grid-auto-flow</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#content와-item의-차이"><span class="nav-number">1.3.</span> <span class="nav-text">content와 item의 차이</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#content"><span class="nav-number">1.3.1.</span> <span class="nav-text">content</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#justify-content"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">justify-content</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#align-content"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">align-content</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#place-content"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">place-content</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#item"><span class="nav-number">1.3.2.</span> <span class="nav-text">item</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#justify-items"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">justify-items</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#align-item"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">align-item</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#place-item"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">place-item</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#justify-self-align-self-place-self"><span class="nav-number">1.3.2.4.</span> <span class="nav-text">justify-self, align-self, place-self</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flexbox와-css-grid-합치기"><span class="nav-number">1.4.</span> <span class="nav-text">flexbox와 css grid 합치기</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#grid-column-grid-row"><span class="nav-number">1.4.1.</span> <span class="nav-text">grid-column, grid-row</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#span"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">span</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#line-Naming"><span class="nav-number">1.4.2.</span> <span class="nav-text">line Naming</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#어떨-때-쓰나"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">어떨 때 쓰나</span></a></li></ol></li></ol></li></ol></li></ol>
+    
+    </div>
+  </aside>
+
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="https://www.notion.so/eunako-attr-every_day-study_hard-ebb1a09d24734280aba94018d13df0a1" class="mobile-nav-link">About</a>
+  
+    <a href="https://www.notion.so/bookmarks-3b11361b4a07466f9fa0236e5f762c87" class="mobile-nav-link">Bookmark</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2020 ERecord All Rights Reserved.
+        
+      </div>
+ </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
