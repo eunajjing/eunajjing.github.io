@@ -104,7 +104,7 @@
         
           <section id="main">
   
-    <article id="post-css_master01" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="post-n-code01" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -112,7 +112,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2020/02/01/css_master01/">CSS 마스터 클래스 01</a>
+      <a class="article-title" href="/2020/02/15/n-code01/">엔코드 - 세미나 특집</a>
     </h1>
   
 
@@ -120,126 +120,114 @@
     
     <div class="article-meta">
       
-	<a href="/2020/02/01/css_master01/" class="article-date">
-	  <time datetime="2020-02-01T08:00:25.000Z" itemprop="datePublished">2월 1, 2020</time>
+	<a href="/2020/02/15/n-code01/" class="article-date">
+	  <time datetime="2020-02-15T08:05:25.000Z" itemprop="datePublished">2월 15, 2020</time>
 	</a>
 
       
 	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/개발공부/">개발공부</a>, <a class="article-category-link" href="/categories/개발공부/CSS/">CSS</a>
+    <a class="article-category-link" href="/categories/개발공부/">개발공부</a>, <a class="article-category-link" href="/categories/개발공부/React/">React</a>
  
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="CSS-마스터-클래스-01"><a href="#CSS-마스터-클래스-01" class="headerlink" title="CSS 마스터 클래스 01"></a>CSS 마스터 클래스 01</h1><blockquote>
-<p>해당 게시글은 노마드코더의 <a href="https://academy.nomadcoders.co/courses/enrolled/360503" target="_blank" rel="noopener">CSS 마스터 클래스</a> 강의를 듣고 요약한 것입니다. 저작권 문제가 발생할 시 삭제될 수 있습니다.</p>
-</blockquote>
-<h2 id="Flexbox"><a href="#Flexbox" class="headerlink" title="Flexbox"></a><code>Flexbox</code></h2><h3 id="flex-container"><a href="#flex-container" class="headerlink" title="flex-container"></a><code>flex-container</code></h3><p><code>display</code> 속성이 <code>flex</code>이며, 자식 요소인 <code>flex-item</code>의 제어권을 지닌다. <strong>자손 요소까지 영향을 끼치지 못한다</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">	<span class="attribute">display </span>: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="justify-content-수평"><a href="#justify-content-수평" class="headerlink" title="justify-content : 수평"></a><code>justify-content</code> : 수평</h4><p>사용하려면 충분한 <code>width</code>를 가지고 있어야 한다</p>
+        <h1 id="프론트엔드에-대해-feat-React"><a href="#프론트엔드에-대해-feat-React" class="headerlink" title="프론트엔드에 대해 (feat.React)"></a><a href="https://www.youtube.com/watch?v=gp5LeSxfD8Q&amp;list=PL03rJBlpwTaA0ioaPahgWOSYzgPI4PWKR" target="_blank" rel="noopener">프론트엔드에 대해 (feat.React)</a></h1><p>플랫폼 : (소스코드가 돌아가는 곳) <strong>브라우저</strong></p>
+<h2 id="탄생-배경"><a href="#탄생-배경" class="headerlink" title="탄생 배경"></a>탄생 배경</h2><ul>
+<li>아이폰이 나오기 이전에는 모든 서비스의 클라이언트는 <strong>브라우저</strong>를 의미<ul>
+<li>백엔드 개발자는 <code>JQuery</code>만으로도 웹 브라우저에서 동작하는 <code>View</code> 소스 코드를 작업할 수 있었다</li>
+</ul>
+</li>
+<li>클라이언트의 기기가 다양해지며 백엔드에서는 데이터와 관련한 로직만을 처리해주고, 각 클라이언트가 서비스가 돌아갈 화면을 만들어주는 시대가 열림<ul>
+<li><code>Restful API</code>의 등장</li>
+</ul>
+</li>
+<li>프론트엔드의 분업으로 퍼포먼스의 차이가 생기기 시작<ul>
+<li>프론트엔드 단에 <strong>설계</strong>라는 개념의 등장<ul>
+<li>이전에는 백엔드 개발자의 의식의 흐름대로 개발이 진행되는 측면</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>브라우저의 발전<ul>
+<li><code>node V8</code> 엔진의 탄생<ul>
+<li><code>node.js</code>를 중심으로 프론트엔드 테크 스택이 독립적으로 발전</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="개발-환경"><a href="#개발-환경" class="headerlink" title="개발 환경"></a>개발 환경</h2><h3 id="트랜스-파일러-바벨"><a href="#트랜스-파일러-바벨" class="headerlink" title="트랜스 파일러 : 바벨"></a>트랜스 파일러 : 바벨</h3><p><code>ECMAScript2015(ES6+)</code> 이전 버전의 언어만 사용하는 브라우저들에게 그들의 언어로 변환해주는 모듈</p>
+<h3 id="번들러-웹팩"><a href="#번들러-웹팩" class="headerlink" title="번들러 : 웹팩"></a>번들러 : 웹팩</h3><p>패키지 매니저로 인해 끌려온 의존성 모듈들 중에서 실제 사용하는 소스 코드만 번들링해주는 역할</p>
+<h3 id="패키지-관리자-npm"><a href="#패키지-관리자-npm" class="headerlink" title="패키지 관리자 : npm"></a>패키지 관리자 : npm</h3><h3 id="CRA"><a href="#CRA" class="headerlink" title="CRA"></a>CRA</h3><p>트랜스 파일, 번들 기능을 사용하기 위해 관례적으로 설정을 해야하는 불편함이 있었고, 이를 이미 설정한 보일러 플레이트 프로젝트를 생성</p>
+<h2 id="리액트의-특징"><a href="#리액트의-특징" class="headerlink" title="리액트의 특징"></a>리액트의 특징</h2><h3 id="컴포넌트-생성-주기"><a href="#컴포넌트-생성-주기" class="headerlink" title="컴포넌트 생성 주기"></a>컴포넌트 생성 주기</h3><p>컴포넌트가 생성되고 소멸되기까지 호출되는 함수가 존재하며, 리액트 컴포넌트 클래스를 상속하는 모든 컴포넌트가 가지고 있다.</p>
+<h3 id="데이터-바인딩"><a href="#데이터-바인딩" class="headerlink" title="데이터 바인딩"></a>데이터 바인딩</h3><ul>
+<li><code>2 way binding</code> : 누구나 데이터를 바꿀 수 있음 (ex. 앵귤러)</li>
+<li><code>1 way binding</code> : 누구도 데이터를 바꿀 수 없음</li>
+</ul>
+<h4 id="리액트의-데이터"><a href="#리액트의-데이터" class="headerlink" title="리액트의 데이터"></a>리액트의 데이터</h4><ul>
+<li><code>state</code><ul>
+<li>상태</li>
+<li>자신만이 가지고 있으며 자신이 핸들링</li>
+<li>상태와 관련한 이벤트 핸들러를 자식들에게 내려준다</li>
+<li><code>state</code>가 변경되면 자식 컴포넌트는 다시 그려진다<ul>
+<li>가상 <code>DOM</code>이 다시 그려지며 변경된 부분을 확인하여 변경하는 형태</li>
+<li>실제 <code>DOM</code>을 건들이지 않는다</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>props</code><ul>
+<li>부모의 상태 일부를 주입 받은 객체. 일반적으로 <code>props.**</code>으로 접근 가능</li>
+<li>불변의 값</li>
+</ul>
+</li>
+</ul>
+<h2 id="redux에서-mobx로의-전환"><a href="#redux에서-mobx로의-전환" class="headerlink" title="redux에서 mobx로의 전환"></a><code>redux</code>에서 <code>mobx</code>로의 전환</h2><h3 id="redux"><a href="#redux" class="headerlink" title="redux"></a><code>redux</code></h3><h4 id="Flux-패턴"><a href="#Flux-패턴" class="headerlink" title="Flux 패턴"></a><code>Flux</code> 패턴</h4><ul>
+<li><code>store</code>라는 하나의 큰 데이터가 존재<ul>
+<li><code>store</code> 안에 <code>store</code>가 있어서 일부의 <code>store</code>만 수신 가능</li>
+</ul>
+</li>
+<li><code>reducer</code>에서만 데이터 핸들링이 가능</li>
+<li>변경된 데이터는 <code>dispatch(action)</code>를 이용해서 전파가 가능</li>
+<li><code>action</code>을 수신하고 있던 컴포넌트가 <code>props</code>로 데이터를 수신</li>
+</ul>
+<h4 id="흐름"><a href="#흐름" class="headerlink" title="흐름"></a>흐름</h4><ol>
+<li>유저가 버튼을 클릭했다고 가정했을 때</li>
+<li>버튼 클릭 이벤트를 수신하는 <code>action</code>이 있고</li>
+<li>해당 <code>action</code>을 <code>dispatch</code>해주는 <code>dispatcher</code>가 있음</li>
+<li>이벤트는 <code>reducer</code>를 통해 판단되어</li>
+<li><code>store</code>를 변경(덮어 씌우고)</li>
+<li><code>view</code>는 <code>store</code>가 변경되었으므로 <code>props</code>가 변경되며 전달</li>
+</ol>
+<h3 id="mobX"><a href="#mobX" class="headerlink" title="mobX"></a><code>mobX</code></h3><h4 id="Observer-패턴"><a href="#Observer-패턴" class="headerlink" title="Observer 패턴"></a><code>Observer</code> 패턴</h4><h3 id="Observer-패턴-1"><a href="#Observer-패턴-1" class="headerlink" title="Observer 패턴"></a><code>Observer</code> 패턴</h3><ul>
+<li><code>data</code></li>
+<li><code>data</code>를 핸들링할 수 있는 <code>action</code>이라는 함수</li>
+</ul>
+<h4 id="흐름-1"><a href="#흐름-1" class="headerlink" title="흐름"></a>흐름</h4><ol>
+<li><code>observable</code>라 정의된 <code>data</code>의 모음인 <code>store</code>가 있고</li>
+<li><p>컴포넌트는 <code>observer</code>가 된다 </p>
 <ul>
-<li><p><code>space-between</code></p>
-<ul>
-<li><code>flex-items</code>을 같은 간격으로 떨어트린다</li>
-<li>기본적으로 반응형 디자인을 지닌다</li>
+<li>사용자 이벤트를 수신</li>
+<li>데이터의 변경이 일어나야 하는데</li>
 </ul>
 </li>
-<li><p><code>flex-start</code></p>
-<ul>
-<li>디폴트 값. 좌측부터 <code>flex-items</code>이 시작</li>
-</ul>
+<li><p>컴포넌트는 <code>store</code> 안에 있는 <code>action</code> 함수를 <code>call</code>하고</p>
 </li>
-<li><code>flex-end</code><ul>
-<li>우측부터 <code>flex-items</code>이 붙는다</li>
-</ul>
-</li>
-<li><code>space-around</code><ul>
-<li><code>flex-items</code> 주변에 간격을 만든다</li>
-<li><code>marginLeft</code>와 <code>marginRight</code>가 있는 것과 비슷</li>
-</ul>
-</li>
-</ul>
-<h4 id="align-items-수직"><a href="#align-items-수직" class="headerlink" title="align-items : 수직"></a><code>align-items</code> : 수직</h4><p>사용하려면 충분한 <code>height</code>를 가지고 있어야 한다</p>
-<ul>
-<li><code>center</code></li>
-<li><code>flex-start</code></li>
-<li><code>flex-end</code></li>
-</ul>
-<h4 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a><code>flex-direction</code></h4><p>기본적으로 <code>row</code> 값을 지니고 있으며, 만약 <code>column</code>으로 값을 변경하게 되면 기준 축이 바뀌며 수직 축과 수평 축이 서로 변경</p>
-<h3 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap"></a><code>flex-wrap</code></h3><p>안에 있는 <code>flex-items</code>가 서로 겹칠 때 사용한다. 기본적으로 <code>flex-items</code>는 공간이 부족하면 <code>item</code>을 찌그러트리는 성질을 지니고 있다. </p>
-<h4 id="no-wrap"><a href="#no-wrap" class="headerlink" title="no-wrap"></a><code>no-wrap</code></h4><p><code>flex-wrap</code>의 기본 값으로 공간이 부족하면 아이템을 찌그러트린다</p>
-<h4 id="wrap"><a href="#wrap" class="headerlink" title="wrap"></a><code>wrap</code></h4><p>아이템이 일그러지는 것을 막는다</p>
-<h3 id="flex-direction-1"><a href="#flex-direction-1" class="headerlink" title="flex-direction"></a><code>flex-direction</code></h3><h4 id="row-reverse"><a href="#row-reverse" class="headerlink" title="row reverse"></a><code>row reverse</code></h4><p><code>flex-items</code>의 순서를 바꾼다. 이 때 <code>start</code>의 값은 우측이 되며, <code>end</code>의 값은 좌측이 된다.</p>
-<h4 id="column-reverse"><a href="#column-reverse" class="headerlink" title="column-reverse"></a><code>column-reverse</code></h4><p><code>flex-items</code>의 순서를 바꾼다. 이 때 <code>top</code>의 값은 하단이 되며, <code>bottom</code>의 값은 상단이 된다.</p>
-<h3 id="align-self"><a href="#align-self" class="headerlink" title="align-self"></a><code>align-self</code></h3><p><code>display</code>에 <code>flex</code>를 지닌 엘리먼트에 주는 속성이 아니라, 직접 <code>items</code>에 옵션을 주는 특이한 속성</p>
-<h2 id="CSS-Grid"><a href="#CSS-Grid" class="headerlink" title="CSS Grid"></a>CSS Grid</h2><h3 id="display-grid"><a href="#display-grid" class="headerlink" title="display : grid"></a><code>display : grid</code></h3><ul>
-<li><p><code>grid-template-columns</code></p>
-</li>
-<li><p><code>grid-template-rows</code></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns </span>: <span class="number">30px</span> <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">grid-template-rows </span>: <span class="number">30px</span> <span class="number">12px</span>;</span><br><span class="line">  <span class="comment">/** 30px 정사각형 하나와 가로 50px, 세로 12px의 직사각형이 만들어진다 **/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li><p><code>grid-gap</code> : <code>.box</code>의 사이를 띄운다</p>
-</li>
-<li><p><code>gride-template-areas</code></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.beforeDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">grid-auto-rows </span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="comment">/* 한 줄에 세로 길이가 어느 정도를 차지할 것인지</span></span><br><span class="line"><span class="comment">  	원한다면 각각의 class에 크기를 넣어도 무방*/</span></span><br><span class="line">  <span class="attribute">grid-template-areas</span>:</span><br><span class="line">    <span class="string">"header header header"</span></span><br><span class="line">    <span class="string">"content content sidebar"</span></span><br><span class="line">    <span class="string">"content content sidebar"</span></span><br><span class="line">    <span class="string">"footer footer footer"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.aaa</span> &#123;</span><br><span class="line">  <span class="attribute">grid-area </span>: header</span><br><span class="line">  <span class="comment">/* 위의 grid-template-areas에서 지정한 이름을 써줘야 함 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="grid-area"><a href="#grid-area" class="headerlink" title="grid-area"></a><code>grid-area</code></h4><p>인자로 <code>grid-template-areas</code>의 이름을 받거나, <code>row start line</code>, <code>column start line</code>, <code>row end line</code>, <code>column end line</code>를 정해줄 수 있다. <code>line</code>은 좌측 상단부터, <code>1</code>부터 시작한다.</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">grid-area </span>: span <span class="number">4</span> / span <span class="number">4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>위와 같은 경우, 좌측을 <code>row</code>로, 우측을 <code>column</code>으로 인식한다.</p>
-<h4 id="fr"><a href="#fr" class="headerlink" title="fr"></a><code>fr</code></h4><p>최대한 공간을 차지하라는 의미의 <strong>단위</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">	<span class="attribute">grid-template-columns </span>: <span class="number">2</span>fr <span class="number">1</span>fr <span class="number">2</span>fr <span class="number">1</span>fr</span><br><span class="line">  <span class="comment">/* 한 줄로 정렬된 div 박스 4개가 나오며,</span></span><br><span class="line"><span class="comment">    첫 div는 두 번째 div보다 두 배가 큰 모양새</span></span><br><span class="line"><span class="comment">    총 6개로 나뉜 그리드 내에 위치한 div들을 생각*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="repeat"><a href="#repeat" class="headerlink" title="repeat"></a><code>repeat</code></h4><p><code>column</code>을 반복하는 <code>CSS</code> 함수</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns </span>: <span class="built_in">repeat</span>(5, 1fr) <span class="number">4</span>fr;</span><br><span class="line">  <span class="comment">/* 5번 반복의 1fr를 만들고 이후 4fr의 것을 붙이겠다 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="minmax"><a href="#minmax" class="headerlink" title="minmax"></a><code>minmax</code></h4><p><code>object</code>가 가져야 하는 최소, 최대 크기를 지정할 수 있는 함수. 즉 <strong>반응형 시에도 줄어들지 않는다</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">	<span class="attribute">grid-template-columns </span>: <span class="built_in">minmax</span>(400px, 2fr) ...</span><br><span class="line">  <span class="comment">/* 최소 크기는 400px이며, 최대 2fr까지 늘어난다 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="max-content"><a href="#max-content" class="headerlink" title="max-content"></a><code>max-content</code></h4><p>가질 수 있는 최대한의 크기를 가지게 하는 속성</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">	<span class="attribute">grid-template-columns </span>: max-content</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="min-content"><a href="#min-content" class="headerlink" title="min-content"></a><code>min-content</code></h4><p>가질 수 있는 가장 최소한의 크기를 가지게 하는 속성</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">	<span class="attribute">grid-template-columns </span>: min-content	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="auto-fit"><a href="#auto-fit" class="headerlink" title="auto-fit"></a><code>auto-fit</code></h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns </span>: <span class="built_in">repeat</span>(auto-fit, 50px)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>가질 수 있는 가장 많은 <code>column</code>을 가지되, 각 <code>column</code>의 크기는 <code>50px</code>로 한다.</p>
+<li><code>mobx</code> 모듈에서 데이터를 변경하고 <code>observing</code> 하고 있는 곳에 알려준다</li>
+</ol>
 <blockquote>
-<p>프론트 단에서 얼마나 많은 수의 <code>div</code>가 만들어져야 하는지 모르는 경우 유용하게 사용할 수 있으며,</p>
+<p><code>parent</code>가 <code>observer</code>가 되고, <code>child</code>는 <code>observer</code>가 될 수도, 안 될 수도 있다</p>
 <blockquote>
-<p>DB에서 불러오는 경우 등</p>
+<p>성능 최적화를 위해서는 <code>child</code>도 <code>observer</code>인 것이 좋다</p>
 </blockquote>
-<p>보통 <code>minmax</code>와 함께 쓰며 유연성을 보완한다</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">&gt;   display : grid;</span><br><span class="line">&gt;   <span class="selector-tag">grid-template-columns</span> : <span class="selector-tag">repeat</span>(<span class="selector-tag">auto-fit</span>, <span class="selector-tag">minmax</span>(350<span class="selector-tag">px</span>, 1<span class="selector-tag">fx</span>))</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
-<h4 id="auto-fill"><a href="#auto-fill" class="headerlink" title="auto-fill"></a><code>auto-fill</code></h4><p>기존에 있는 <code>layout</code>을 <code>cell</code>로 채워나가며, <code>cell</code>이 없는 경우 <code>ghost grid</code>로 채워짐</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns </span>: <span class="built_in">repeat</span>(auto-fill, minmax(350px, 1fx))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="grid-auto-flow"><a href="#grid-auto-flow" class="headerlink" title="grid-auto-flow"></a><code>grid-auto-flow</code></h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">	<span class="attribute">grid-auto-flow </span>: row dense;</span><br><span class="line">  <span class="comment">/* 한 줄에 비어있는 것이 없도록 가득 채운다,</span></span><br><span class="line"><span class="comment">  즉 ghost item이 존재하지 않는다</span></span><br><span class="line"><span class="comment">  또 다른 값으로는 row 대신 column을 넣을 수도 있다 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="content와-item의-차이"><a href="#content와-item의-차이" class="headerlink" title="content와 item의 차이"></a><code>content</code>와 <code>item</code>의 차이</h2><h3 id="content"><a href="#content" class="headerlink" title="content"></a><code>content</code></h3><p>만들어놓은 그리드 자체를 옮긴다.</p>
-<h4 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a><code>justify-content</code></h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">justify-content </span>: center;</span><br><span class="line">  <span class="comment">/* 여러 개의 자식 요소들이 상단 중앙으로 정렬된다</span></span><br><span class="line"><span class="comment">  값으로는 start, end가 있으며 이는 flex와 유사하게 보인다 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a><code>align-content</code></h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">align-content </span>: center;</span><br><span class="line">  <span class="comment">/* 여러 개의 자식 요소들이 세로 축을 기준으로 중앙으로 정렬된다</span></span><br><span class="line"><span class="comment">  값으로는 start, end가 있으며 이는 flex와 유사하게 보인다 */</span></span><br><span class="line">  <span class="attribute">height </span>: <span class="number">100vh</span>;</span><br><span class="line">  <span class="comment">/* height 값이 필요 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="place-content"><a href="#place-content" class="headerlink" title="place-content"></a><code>place-content</code></h4><p>인자로 두 개를 받으며, 첫 인자는 <code>align-content</code>, 두 번째 인자로 <code>justify-content</code>를 받는다.</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">place-content </span>: center center</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="item"><a href="#item" class="headerlink" title="item"></a><code>item</code></h3><p><code>items</code>을 움직이게 한다. 만약 <code>justify</code>나 <code>align</code>을 하지 않았을 때 <code>default</code> 값은 <code>item</code> 확장 상태</p>
-<h4 id="justify-items"><a href="#justify-items" class="headerlink" title="justify-items"></a><code>justify-items</code></h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">	<span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">grid-auto-rows </span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">grid-template-colums </span>: <span class="built_in">repeat</span>(5, 100px);</span><br><span class="line">  <span class="comment">/* 100px 정사각형 box를 만들고 */</span></span><br><span class="line">  <span class="attribute">justify-items </span>: center;</span><br><span class="line">  <span class="comment">/* box 안, column 안에서 가로 축을 기준으로 center 정렬</span></span><br><span class="line"><span class="comment">  값으로는 start, end도 있다*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="align-item"><a href="#align-item" class="headerlink" title="align-item"></a><code>align-item</code></h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">	<span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">grid-auto-rows </span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">grid-template-colums </span>: <span class="built_in">repeat</span>(5, 100px);</span><br><span class="line">  <span class="comment">/* 100px 정사각형 box를 만들고 */</span></span><br><span class="line">  <span class="attribute">align-item </span>: center;</span><br><span class="line">  <span class="comment">/* box 안, column 안에서 세로 축을 기준으로 center 정렬</span></span><br><span class="line"><span class="comment">  값으로는 start, end도 있다*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="place-item"><a href="#place-item" class="headerlink" title="place-item"></a><code>place-item</code></h4><p>인자로 두 개를 받으며, 첫 인자는 <code>align-item</code>, 두 번째 인자로 <code>justify-item</code>를 받는다.</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">	<span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">grid-auto-rows </span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">grid-template-colums </span>: <span class="built_in">repeat</span>(5, 100px);</span><br><span class="line">  <span class="attribute">place-item </span>: center center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="justify-self-align-self-place-self"><a href="#justify-self-align-self-place-self" class="headerlink" title="justify-self, align-self, place-self"></a><code>justify-self</code>, <code>align-self</code>, <code>place-self</code></h4><p>해당 요소에만 정렬 적용</p>
-<h2 id="flexbox와-css-grid-합치기"><a href="#flexbox와-css-grid-합치기" class="headerlink" title="flexbox와 css grid 합치기"></a><code>flexbox</code>와 <code>css grid</code> 합치기</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">grid-gap</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">grid-auto-rows</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">grid-template-columns</span>: <span class="built_in">repeat</span>(5, 1fr);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">place-item </span>: center center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 부모 요소의 자식들은 그리드를 따르며, 안에 있는 자식 요소는 flex 속성을 지닌다.</span></span><br><span class="line"><span class="comment">	정렬은 중앙 정렬로 한다 */</span></span><br></pre></td></tr></table></figure>
-<h3 id="grid-column-grid-row"><a href="#grid-column-grid-row" class="headerlink" title="grid-column, grid-row"></a><code>grid-column</code>, <code>grid-row</code></h3><p>부모 요소 <code>Div</code>에 작성하지 않고, 자식 요소  <code>Div</code>에 작성</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:first-child</span> &#123;</span><br><span class="line">  <span class="attribute">grid-column-start</span>: <span class="number">1</span>;</span><br><span class="line">  <span class="attribute">grid-column-end</span>: <span class="number">5</span>;</span><br><span class="line">  <span class="comment">/* 1번째 line부터 시작해서 5번째 line까지</span></span><br><span class="line"><span class="comment">  칼럼으로 친다면 첫 칼럼부터 4 칼럼(5-1)까지 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 이렇게도 쓸 수 있다 */</span></span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:first-child</span> &#123;</span><br><span class="line">  <span class="attribute">grid-column </span>: <span class="number">1</span> / <span class="number">5</span>;</span><br><span class="line">  <span class="comment">/* 매한가지로 grid-row도 적용이 가능하다 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><strong>-1</strong></p>
-<p>자동적으로 제일 마지막 <code>line</code>을 택할 때 쓴다. 마지막 <code>line</code>이 몇 번째인지 모를 때 사용</p>
-<h4 id="span"><a href="#span" class="headerlink" title="span"></a><code>span</code></h4><p><code>x</code>번 째부터 <code>y</code>번 째를 정해줄 필요 없이 단순히 그 칼럼이 가져야 하는 수를 지정할 때 사용</p>
-</blockquote>
-<h3 id="line-Naming"><a href="#line-Naming" class="headerlink" title="line Naming"></a><code>line Naming</code></h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">	<span class="attribute">grid-template-columns</span>:</span><br><span class="line">    [first-line] <span class="number">1</span>fr</span><br><span class="line">    [second-line] <span class="number">1</span>fr</span><br><span class="line">    [third-line] <span class="number">1</span>fr</span><br><span class="line">    [fourth-line] <span class="number">1</span>fr</span><br><span class="line">    [fifth-line] <span class="number">1</span>fr</span><br><span class="line">    [sixth-line];</span><br><span class="line">  <span class="comment">/* 이름은 반드시 `-`로 이어져 있어야 하고, 배열 형태여야 한다. */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:first-child</span> &#123;</span><br><span class="line">  <span class="attribute">grid-column-start </span>: second-line;</span><br><span class="line">  <span class="attribute">grid-column-end </span>: fourth-line;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="어떨-때-쓰나"><a href="#어떨-때-쓰나" class="headerlink" title="어떨 때 쓰나"></a>어떨 때 쓰나</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.someDiv</span> &#123;</span><br><span class="line">  <span class="attribute">display </span>: grid;</span><br><span class="line">  <span class="attribute">grid-auto-rows </span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">grid-template-columns </span>: [first-line] <span class="built_in">repeat</span>(5, 1fr) [last-line]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:first-child</span> &#123;</span><br><span class="line">  <span class="attribute">grid-column-start </span>: first-line;</span><br><span class="line">  <span class="attribute">grid-column-end </span>: last-line;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="entry-meta entry-footer">
       
 	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/개발공부/">개발공부</a>, <a class="article-category-link" href="/categories/개발공부/CSS/">CSS</a>
+    <a class="article-category-link" href="/categories/개발공부/">개발공부</a>, <a class="article-category-link" href="/categories/개발공부/React/">React</a>
 
       
       
@@ -257,7 +245,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/135/">135</a><a class="extend next" rel="next" href="/page/3/">Next</a>
+    <a class="extend prev" rel="prev" href="/">Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/137/">137</a><a class="extend next" rel="next" href="/page/3/">Next</a>
   </nav>
 
 </section>
@@ -310,7 +298,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/">개발공부</a><span class="category-list-count">105</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/CSS/">CSS</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/GraphQL/">GraphQL</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/React/">React</a><span class="category-list-count">25</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/Vue/">Vue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/javascript/">javascript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/nodeJS/">nodeJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/뉴딜과정/">뉴딜과정</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/몽고DB/">몽고DB</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/부스트코스/">부스트코스</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/부스트코스/웹-프로그래밍/">웹 프로그래밍</a><span class="category-list-count">10</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/안드로이드/">안드로이드</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/알고리즘-난항일지/">알고리즘 난항일지</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/우아한테크러닝-React-Typescript/">우아한테크러닝(React+Typescript)</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/정보처리기사/">정보처리기사</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/일상/">일상</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/책/">책</a><span class="category-list-count">7</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/">개발공부</a><span class="category-list-count">107</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/CSS/">CSS</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/GraphQL/">GraphQL</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/React/">React</a><span class="category-list-count">27</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/Vue/">Vue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/javascript/">javascript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/nodeJS/">nodeJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/뉴딜과정/">뉴딜과정</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/몽고DB/">몽고DB</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/부스트코스/">부스트코스</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/부스트코스/웹-프로그래밍/">웹 프로그래밍</a><span class="category-list-count">10</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/안드로이드/">안드로이드</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/알고리즘-난항일지/">알고리즘 난항일지</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/우아한테크러닝-React-Typescript/">우아한테크러닝(React+Typescript)</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/개발공부/정보처리기사/">정보처리기사</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/일상/">일상</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/책/">책</a><span class="category-list-count">7</span></li></ul>
     </div>
   </div>
 
@@ -351,6 +339,30 @@
     </ul>
     <div class="widget">
       <ul>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2020/02/16/mobx01/">mobX</a></h6>
+              <span>2월 16, 2020</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2020/02/15/n-code01/">엔코드 - 세미나 특집</a></h6>
+              <span>2월 15, 2020</span>
+            </div>
+
+          </li>
         
           <li class="clearfix">
 
@@ -400,30 +412,6 @@
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2020/01/20/vue-intro/">Age of Vue.js</a></h6>
-              <span>1월 20, 2020</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2020/01/01/new-programmers-manual01/">신입 개발자 생존의 기술 - 전문적인 프로그래밍</a></h6>
-              <span>1월 1, 2020</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -434,7 +422,7 @@
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">2월 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">1월 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">12월 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">11월 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">9월 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">8월 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">7월 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">6월 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">5월 2019</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">4월 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">3월 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">2월 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">1월 2019</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">12월 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">11월 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">10월 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">9월 2018</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">2월 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">1월 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">12월 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">11월 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">9월 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">8월 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">7월 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">6월 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">5월 2019</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">4월 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">3월 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">2월 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">1월 2019</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">12월 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">11월 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">10월 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">9월 2018</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
